@@ -15,6 +15,8 @@ export default function Blog(props: { data: { title: string, description: string
                 <div style={{ position: 'relative', width: '80vw', height: '40vh', margin: 'auto' }}>
                   <Image
                     src={post.cover_image}
+                    placeholder="blur"
+                    blurDataURL={post.cover_image_blur}
                     layout="fill"
                     alt=""
                     objectFit="cover" // or objectFit="cover"
