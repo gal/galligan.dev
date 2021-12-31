@@ -47,7 +47,7 @@ export default function Post(props: Props) {
         <meta property="article:modified_time" content={props.meta.modified} />
         <meta property="article:section" content={props.meta.tags.split(",")[0]} />
 
-        // meta tag for each tag
+        // meta entry for each tag
         {props.meta.tags.split(",").map((tag) => (
           <meta key={tag} property="article:tag" content={tag} />
         ))}
@@ -91,7 +91,7 @@ export default function Post(props: Props) {
 }
 
 export async function getStaticProps({ params }: { params: { slug: string } }) {
-  const bytes = await fs.readFileSync(path.join(process.cwd(), "_posts", params.slug + ".md"), 'utf8')
+  const bytes = fs.readFileSync(path.join(process.cwd(), "_posts", params.slug + ".md"), 'utf8')
   const { data, content } = matter(bytes)
 
   return {
