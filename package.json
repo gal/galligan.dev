@@ -16,7 +16,8 @@
     "next": "latest",
     "next-mdx-remote": "^3.0.8",
     "react": "latest",
-    "react-dom": "latest"
+    "react-dom": "latest",
+    "sharp": "^0.29.3"
   },
   "scripts": {
     "dev": "next",
