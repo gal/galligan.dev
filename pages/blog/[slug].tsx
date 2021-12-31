@@ -63,7 +63,7 @@ export default function Post(props: Props) {
         <meta name="twitter:image:alt" content="Thomas Daniel Galligan's Blog" />
 
       </Head>
-      <figure style={{ position: 'relative', width: '100%', height: '60vh', left: 0, right: 0, margin: 0, padding: 'none' }}>
+      <figure style={{ position: 'relative', width: '100%', height: '50vh', left: 0, right: 0, margin: 0, padding: 'none' }}>
         <Image
           src={props.meta.cover_image}
           blurDataURL={props.meta.cover_image_blur}
