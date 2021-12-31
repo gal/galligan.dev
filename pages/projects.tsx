@@ -1,9 +1,9 @@
 import Head from 'next/head';
 
 import * as React from 'react';
-import { Grid, Container, Card, CardHeader, CardContent, IconButton, CardMedia } from '@mui/material';
+import { Grid, Container, Card, CardHeader, CardContent, IconButton, CardMedia, CardActionArea } from '@mui/material';
 
-import {GitHub} from '@mui/icons-material'
+import { GitHub } from '@mui/icons-material'
 export default function Projects() {
 
   interface Project {
@@ -42,21 +42,20 @@ export default function Projects() {
       <Head>
         <title>Projects - Thomas D. Galligan</title>
         <meta name="description" content="Thomas D. Galligan's Projects" />
-        
+
         {/* opengraph metadatas */}
         <meta property="og:title" content="Projects - Thomas D. Galligan" />
         <meta property="og:description" content="A page outlining projects contributed to by Thomas D. Galligan" />
         <meta property="og:locale" content="en_IE" />
         <meta property="og:url" content="https://galligan.dev/projects" />
         <meta property="og:type" content="profile" />
-        
+
         <meta property="og:profile:first_name" content="Thomas" />
         <meta property="og:profile:last_name" content="Galligan" />
         <meta property="og:profile:username" content="gal" />
         <meta property="og:profile:gender" content="male" />
-
       </Head>
-      
+
       <Container
         style={{
           paddingBottom: '2rem',
@@ -67,30 +66,30 @@ export default function Projects() {
           {myProjects.map((project: Project) => (
             <Grid key={project.name} item xs={6}>
               <Card style={{ height: '500px' }}>
-                <CardMedia
-                  component="img"
-                  style={{
-                    objectFit: 'contain',
-                  }}
-                  image={project.image}
-                  alt="Project OpenGraph image"
-                />
-                <CardHeader
-                  titleTypographyProps={{ variant: 'h4' }}
-                  title={project.name}
-                  avatar={
-
-                    <IconButton
-                      href={project.github}
-                    >
-                      <GitHub color="success" />
-                    </IconButton>
-                  }
-                ></CardHeader>
-                <CardContent>
-                  <p>{project.description}</p>
-                </CardContent>
-
+                <CardActionArea href={project.github}>
+                  <CardMedia
+                    component="img"
+                    style={{
+                      objectFit: 'contain',
+                    }}
+                    image={project.image}
+                    alt="Project OpenGraph image"
+                  />
+                  <CardHeader
+                    titleTypographyProps={{ variant: 'h4' }}
+                    title={project.name}
+                    avatar={
+                      <IconButton
+                        href={project.github}
+                      >
+                        <GitHub color="success" />
+                      </IconButton>
+                    }
+                  ></CardHeader>
+                  <CardContent>
+                    <p>{project.description}</p>
+                  </CardContent>
+                </CardActionArea>
               </Card>
             </Grid>
           ))}
