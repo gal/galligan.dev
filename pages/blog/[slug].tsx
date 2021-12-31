@@ -21,7 +21,6 @@ interface Props {
 export default function Post(props: Props) {
   return (
     <>
-
       <Head>
         <link rel="preload" as="font" href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic&display=swap" />
 
@@ -94,8 +93,6 @@ export default function Post(props: Props) {
 export async function getStaticProps({ params }: { params: { slug: string } }) {
   const bytes = await fs.readFileSync(path.join(process.cwd(), "_posts", params.slug + ".md"), 'utf8')
   const { data, content } = matter(bytes)
-
-  // use marked to convert markdown to html
 
   return {
     props: {
