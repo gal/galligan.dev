@@ -1,0 +1,15 @@
+/* if screen width larger than 900 pixels */
+@media screen and (min-width: 900px) {
+  .privacy {
+    width: 70%;
+    margin: auto;
+  }
+}
+
+.privacy a {
+    color: #ff5fbc;
+}
+
+.privacy a:hover {
+    color: #cf4897;
+}
