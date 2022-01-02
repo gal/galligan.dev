@@ -61,8 +61,8 @@ export default function Post(props: Props) {
 
         <meta name="twitter:domain" content="galligan.dev" />
         <meta name="twitter:image:alt" content="Thomas Daniel Galligan's Blog" />
-        <Script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2145602537507302"
-          crossOrigin="anonymous"></Script>
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2145602537507302"
+          crossorigin="anonymous"></script>
       </Head>
       <figure style={{ position: 'relative', width: '100%', height: '50vh', left: 0, right: 0, margin: 0, padding: 'none' }}>
         <Image
