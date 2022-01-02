@@ -86,6 +86,8 @@ export default function Post(props: Props) {
       </article>
       <Script src="/static/prism.js" strategy='lazyOnload' />
       <link rel="stylesheet" href="/static/prism.css" />
+      <Script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2145602537507302"
+        crossOrigin="anonymous"></Script>
     </>
   )
 }

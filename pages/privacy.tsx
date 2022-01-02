@@ -35,6 +35,11 @@ export default function Privacy() {
         <strong>
           If you would like to opt out of personalized advertisements from Google, you can do so by visiting <a href="https://www.google.com/settings/ads">Ads Settings</a>.
         </strong>
+        
+        <strong>
+          Any inqurieis can be sent <a href="/contact">here.</a>
+        </strong>
+
       </div>
     </>
   )
