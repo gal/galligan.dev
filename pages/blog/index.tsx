@@ -9,7 +9,9 @@ export default function Blog(props: { data: { title: string, description: string
     <>
       <Container style={{ margin: '1em auto' }}>
         {props.data.map((post) => (
-          <Card key={post.title} >
+          <Card key={post.title} style={{
+            margin: '1em auto',
+          }} >
             <CardActionArea href={"/blog/"+ post.slug}>
               <CardMedia>
                 <div style={{ position: 'relative', width: '80vw', height: '40vh', margin: 'auto' }}>
