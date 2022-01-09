@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Typography, AppBar, Toolbar, Button, IconButton, Container, Link, Drawer } from "@mui/material";
+import { AppBar, Toolbar, Button, IconButton, Container, Link, Drawer } from "@mui/material";
 import { GitHub, LinkedIn, Menu } from "@mui/icons-material";
 
 import styles from './Nav.module.css';
@@ -21,11 +21,9 @@ export default function Nav() {
     >
       <Container>
         <Toolbar disableGutters style={{ display: 'flex', justifyContent: 'space-between' }}>
-          <Typography variant="body1">
-            <Link href="/" underline="none" color="inherit" style={{ padding: '1rem' }}>
-              Thomas Galligan
-            </Link>
-          </Typography>
+          <Link href="/" underline="none" color="inherit" style={{ padding: '1rem' }}>
+            <span style={{ whiteSpace: 'nowrap' }}>Thomas Galligan</span>
+          </Link>
 
           <div className={styles.nav}>
             <div
