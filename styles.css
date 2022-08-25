@@ -95,7 +95,7 @@ body {
 
 .contact a {
   height: 50px;
-  width: 50px;;
+  width: 50px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -217,6 +217,7 @@ main .vertically-rotate {
   position: relative;
   float: left;
 }
+
 .rotating {
   font-size: 30px;
   height: 50px;
@@ -245,12 +246,23 @@ main .vertically-rotate {
   0% {
     top: 0px;
   }
+
   30% {
     top: -50px;
   }
+  
+  40% {
+    top: -50px;
+  }
+
   60% {
     top: -100px;
   }
+
+  70% {
+    top: -100px;
+  }
+
   95% {
     top: 0px;
   }
