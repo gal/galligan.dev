@@ -241,7 +241,12 @@ main .vertically-rotate {
   position: relative;
 }
 
-main a, .highlight {
+section td {
+  padding-right: 2em;
+}
+
+main a,
+.highlight {
   color: #e65f5f;
   font-weight: bold;
 }
@@ -267,7 +272,7 @@ main a, .highlight {
   30% {
     top: -50px;
   }
-  
+
   40% {
     top: -50px;
   }
