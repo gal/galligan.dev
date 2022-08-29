@@ -125,8 +125,8 @@ body {
 main {
   font-size: 18px;
   width: 65vw;
-  padding: 0vh 2vw 12vh 6vw;
-  height: 100vh;
+  padding: 0vh 2vw 4vh 6vw;
+  min-height: 100vh;
   color: white;
   margin-left: 35vw;
 }
