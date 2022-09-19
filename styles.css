@@ -95,6 +95,11 @@ body {
   margin: 0.2em 0;
 }
 
+.contact ul li img {
+  width: 24px;
+  height: 24px;
+}
+
 .contact a {
   height: 50px;
   width: 50px;
