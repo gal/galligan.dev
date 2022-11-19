@@ -118,8 +118,9 @@ class Dot {
                 }
 
                 ctx.beginPath();
-                ctx.moveTo(this.x + 2, this.y + 2);
-                ctx.lineTo(dot.x + 2, dot.y + 2);
+                const offset = dotsize / 2
+                ctx.moveTo(this.x + offset, this.y + offset);
+                ctx.lineTo(dot.x + offset, dot.y + offset);
                 ctx.stroke();
             }
         });
