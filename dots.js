@@ -4,11 +4,10 @@ const coverImg = document.querySelector('.cover-overlay');
 const relativeX = coverImg.getBoundingClientRect().x;
 const relativeY = coverImg.getBoundingClientRect().y;
 
-
 canvas.width = canvas.offsetWidth
 
 canvas.height = 0
-canvas.height = visualViewport.height;
+canvas.height = window.innerHeight;
 
 const dpi = window.devicePixelRatio;
 
