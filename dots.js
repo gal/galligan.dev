@@ -4,15 +4,15 @@ const coverImg = document.querySelector('.cover-overlay');
 const relativeX = coverImg.getBoundingClientRect().x;
 const relativeY = coverImg.getBoundingClientRect().y;
 
-canvas.width = canvas.offsetWidth
+canvas.width = visualViewport.width;
 
 canvas.height = 0
 canvas.height = window.innerHeight;
 
-const dpi = window.devicePixelRatio;
+// const dpi = window.devicePixelRatio;
 
 const ctx = canvas.getContext('2d')
-ctx.scale(dpi, dpi);
+// ctx.scale(dpi, dpi);
 
 dotsize = window.visualViewport.width > 600 ? 3 : 1;
 
