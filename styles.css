@@ -87,18 +87,17 @@ main ul li a {
   justify-content: center;
   align-items: center;
   margin: auto;
-  position: relative
+  /* position: relative */
 }
 
 #modal a {
+  font-size: 0.9em;
   position: absolute;
   bottom: 0;
   right: 0;
   padding: 1em 2em;
-  cursor: pointer;
   color: white;
   z-index: 4;
-  /* backdrop-filter: blur(4px); */
   background-color: #000a;
 }
 
