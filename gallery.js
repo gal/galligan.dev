@@ -4,9 +4,18 @@ const modalContainer = document.getElementById("modal_container");
 const modal = document.getElementById("modal");
 const modalImg = document.getElementById("modal_img");
 
-modalContainer.addEventListener("click", () => {
+const closeModal = () => {
   modalContainer.style.display = "none";
-});
+}
+
+modalContainer.addEventListener("click", () => {closeModal()});
+window.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") {
+    console.log("esc pressed")
+    closeModal();
+  }
+})
+
 
 const imageClicked = (image) => {
   // when image is clicked, open up a larger view of the image in a modal-type view

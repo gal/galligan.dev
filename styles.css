@@ -8,11 +8,33 @@ html, body {
   height: 100%;
   margin: 0;
   padding: 0;
+  background-color: #121212;
+  color: white;
+  font-family: sans-serif;
+  text-align: center;
+}
+
+main ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+main ul li {
+  margin: 1em 1em;
+}
+
+main ul li a {
+  color: white;
 }
 
 #gallery {
-  max-width: 1400px;
-  margin: auto;
+  width: 1400px;
+  margin: 2em auto;
   padding: 4em 2em;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -73,4 +95,20 @@ html, body {
   object-fit: cover;
   object-position: center;
   margin: auto;
+}
+
+@media screen and (max-width: 1400px) {
+  #gallery {
+    padding: 0;
+    width: 100%;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #gallery {
+    padding: 0;
+    width: 100%;
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
