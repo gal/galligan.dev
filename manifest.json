@@ -1,0 +1,49 @@
+{
+  "domain": "d2kxt83yjeiafa.cloudfront.net",
+  "images": [
+    {
+      "url": "DSC00102.jpg",
+      "alt": "DSC00102"
+    },
+    {
+      "url": "DSC00232.jpg",
+      "alt": "DSC00232"
+    },
+    {
+      "url": "DSC00260.jpg",
+      "alt": "DSC00260"
+    },
+    {
+      "url": "DSC00273.jpg",
+      "alt": "DSC00273"
+    },
+    {
+      "url": "DSC00280.jpg",
+      "alt": "DSC00280"
+    },
+    {
+      "url": "DSC00292.jpg",
+      "alt": "DSC00292"
+    },
+    {
+      "url": "DSC00294.jpg",
+      "alt": "DSC00294"
+    },
+    {
+      "url": "DSC00326.jpg",
+      "alt": "DSC00326"
+    },
+    {
+      "url": "DSC00336.jpg",
+      "alt": "DSC00336"
+    },
+    {
+      "url": "DSC00343.jpg",
+      "alt": "DSC00343"
+    },
+    {
+      "url": "https://plus.unsplash.com/premium_photo-1683309555671-7efeac6caa3d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
+      "alt": "something"
+    }
+  ]
+}

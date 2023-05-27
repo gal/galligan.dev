@@ -11,7 +11,8 @@
   <meta name="description" content="About page for Thomas Galligan, a software engineer in Cork, Ireland" />
 
   <meta property="og:title" content="About - Thomas Galligan" />
-  <meta property="og:description" content="About page for Thomas Daniel Galligan, a software engineer in Cork, Ireland" />
+  <meta property="og:description"
+    content="About page for Thomas Daniel Galligan, a software engineer in Cork, Ireland" />
   <meta property="og:locale" content="en_IE" />
   <meta property="og:url" content="https://www.galligan.dev" />
   <meta property="og:type" content="profile" />
@@ -24,17 +25,17 @@
 </head>
 
 <body>
-  <header>
-    <div>
-      <img draggable="false" class="cover-default" src="assets/branding/vector/default-monochrome.svg" alt="">
-      <img draggable="false" class="cover-overlay" src="assets/branding/vector/default-monochrome.svg" alt="">
+  <div id="gallery" class="gallery">
+    <div id="img_container_node" class="img_container">
+      <img loading="lazy" src="" alt="" />
     </div>
-    <canvas id="dots" />
-  </header>
-  <footer>
-    Icon created by Alfredo @ <a href="https://thenounproject.com/AlfredoCreates/">TheNounProject</a>
-  </footer>
-  <script src="script.js"></script>
-  <script src="dots.js"></script>
+  </div>
+  <div id="modal_container">
+    <div id="modal">
+      <img id="modal_img" />
+    </div>
+  </div>
+  <script src="gallery.js"></script>
 </body>
+
 </html>
