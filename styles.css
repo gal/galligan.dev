@@ -63,20 +63,23 @@ main ul li a {
 
 #modal_container {
   display: none;
-  /* display:  */
+  align-items: center;
+  justify-content: space-evenly;
   backdrop-filter: blur(10px);
   background: #000a;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
+  bottom: 0;
   width: 100%;
 }
 
 #modal {
   margin: auto;
   z-index: 3;
-  width: 80vw;
+  max-width: 80vw;
+  max-height: 98vh;
   height: 100vh;
   object-fit: cover;
   object-position: center;
@@ -84,6 +87,19 @@ main ul li a {
   justify-content: center;
   align-items: center;
   margin: auto;
+  position: relative
+}
+
+#modal a {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 1em 2em;
+  cursor: pointer;
+  color: white;
+  z-index: 4;
+  /* backdrop-filter: blur(4px); */
+  background-color: #000a;
 }
 
 #modal>img {

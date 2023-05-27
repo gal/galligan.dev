@@ -3,6 +3,7 @@ var image_node = document.getElementById("img_container_node");
 const modalContainer = document.getElementById("modal_container");
 const modal = document.getElementById("modal");
 const modalImg = document.getElementById("modal_img");
+const modalLink = document.getElementById("modal_link");
 
 const closeModal = () => {
   modalContainer.style.display = "none";
@@ -16,14 +17,14 @@ window.addEventListener("keydown", (e) => {
   }
 })
 
-
 const imageClicked = (image) => {
   // when image is clicked, open up a larger view of the image in a modal-type view
   console.log(image)
 
-  modalContainer.style.display = "block";
+  modalContainer.style.display = "flex";
   modalImg.src = image.src;
   modalImg.alt = image.alt;
+  modalLink.href = image.src.replace("preview", "fullsize");
 }
 
 const getImages = async () => {
