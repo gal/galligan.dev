@@ -9,11 +9,41 @@ const closeModal = () => {
   modalContainer.style.display = "none";
 }
 
+const goRight = () => {
+  // go to the next image if it exists
+  const currentImg = modalImg.src;
+  const nextImg = document.querySelector(`img[src="${currentImg}"]`).parentElement.nextElementSibling;
+  if (nextImg) {
+    modalImg.src = nextImg.querySelector("img").src;
+    modalImg.alt = nextImg.querySelector("img").alt;
+    modalLink.href = nextImg.querySelector("img").src.replace("preview", "fullsize");
+  }
+}
+
+const goLeft = () => {
+  const currentImg = modalImg.src;
+  const prevImg = document.querySelector(`img[src="${currentImg}"]`).parentElement.previousElementSibling;
+  if (prevImg) {
+    modalImg.src = prevImg.querySelector("img").src;
+    modalImg.alt = prevImg.querySelector("img").alt;
+    modalLink.href = prevImg.querySelector("img").src.replace("preview", "fullsize");
+  }
+}
+
 modalContainer.addEventListener("click", () => {closeModal()});
 window.addEventListener("keydown", (e) => {
-  if (e.key === "Escape") {
-    console.log("esc pressed")
-    closeModal();
+  switch (e.key) {
+    case "ArrowRight":
+      goRight();
+      break;
+    case "ArrowLeft":
+      goLeft();
+      break;
+    case "Escape":
+      closeModal();
+      break;
+    default:
+      break;
   }
 })
 
