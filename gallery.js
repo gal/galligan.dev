@@ -1,5 +1,5 @@
 var gallery = document.getElementById("gallery");
-var image_node = document.getElementById("img_container_node");
+var image_node = document.getElementById("img_node");
 const modalContainer = document.getElementById("modal_container");
 const modal = document.getElementById("modal");
 const modalImg = document.getElementById("modal_img");
@@ -30,7 +30,7 @@ const goLeft = () => {
   }
 }
 
-modalContainer.addEventListener("click", () => {closeModal()});
+modalContainer.addEventListener("click", () => { closeModal() });
 window.addEventListener("keydown", (e) => {
   switch (e.key) {
     case "ArrowRight":
@@ -67,10 +67,10 @@ const getImages = async () => {
   const images = data.images;
 
   images.forEach((image) => {
-    const newImgContainer = image_node.cloneNode(true);
-    newImgContainer.id = "";
-    const newImg = newImgContainer.querySelector("img");
-    
+    // const newImgContainer = image_node.cloneNode(true);
+    // newImgContainer.id = "";
+    const newImg = image_node.cloneNode("true");
+
     const imageSplit = image.url.split(".");
     if (imageSplit.length > 2) {
       newImg.src = image.url
@@ -80,12 +80,17 @@ const getImages = async () => {
 
     newImg.alt = image.alt;
 
-    gallery.appendChild(newImgContainer);
+    gallery.appendChild(newImg);
 
     newImg.addEventListener("click", () => {
       imageClicked(newImg);
     });
   });
+
+  var colcade = new Colcade('.gallery', {
+    columns: '.gallery-col',
+    items: '.gallery-item'
+  })
 }
 
 getImages()
