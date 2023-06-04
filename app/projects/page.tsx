@@ -28,7 +28,7 @@ export default async function Projects() {
 
 async function getData() {
   try {
-    const data = await fetch(`${process.env.NEXT_BASE_URL}/api/projects`, { next: { revalidate: 120 }}).then((res) => res.json());
+    const data = await fetch(`${process.env.NEXT_BASE_URL}/api/projects`, { next: { revalidate: 300 }}).then((res) => res.json());
     return data;
   } catch (error) {
     console.log(error);

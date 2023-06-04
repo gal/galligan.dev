@@ -1,4 +1,8 @@
-export default function About() {
+import { cache } from "react";
+
+export default async function About() {
+  const data = await getData() as { id: string, body: string; }[];
+
   return (
     <main>
       <div id="aboutme" className="h-screen flex flex-col items-middle justify-center text-center px-2">
@@ -25,10 +29,27 @@ export default function About() {
             </li>
           </ul>
         </nav>
-        <p className="animate-fade-up mt-12 text-sm max-w-2xl mx-auto">
-        Welcome to my portfolio website! I am an enthusiastic software engineer with a diverse skill set and a deep love for technology. Currently, I work as an associate software engineer at IBM, where I contribute to the development of QRadar SOAR, an innovative product. My programming journey has exposed me to various languages, and I particularly enjoy working with languages like Golang and TypeScript. I have a keen interest in system design, always striving to create efficient and scalable solutions. Additionally, I find great satisfaction in full-stack web development, combining my knowledge of both frontend and backend technologies to craft seamless user experiences. With a strong foundation in programming principles and an insatiable curiosity for new challenges, I am constantly seeking opportunities to grow and make a meaningful impact in the world of software engineering.
-        </p>
+
+        <section className="mt-8">
+          {data.map((paragraph) => (
+            <p key={paragraph.id} className="animate-fade-up mt-2 text-sm max-w-2xl mx-auto">
+              {paragraph.body}
+            </p>
+          ))}
+        </section>
       </div>
     </main>
   )
+}
+
+async function getData() {
+  return await cache(async () => {
+    try {
+      const data = await fetch(`${process.env.NEXT_BASE_URL}/api/about`, { next: { revalidate: 300 } }).then((res) => res.json());
+      return data;
+    } catch (error) {
+      console.log(error);
+      return [];
+    }
+  })()
 }

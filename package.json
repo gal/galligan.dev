@@ -24,6 +24,7 @@
     "typescript": "5.1.3"
   },
   "devDependencies": {
+    "tailwind-scrollbar": "^3.0.4",
     "tailwindcss-animated": "^1.0.1"
   }
 }

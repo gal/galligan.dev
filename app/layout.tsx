@@ -17,10 +17,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <header className="fixed w-full h-10">
-          <nav className="bottom-0 left-0 right-0 absolute">
+        <header className="fixed w-full h-10 backdrop-blur-sm">
+          <nav className="h-full">
             <ul 
-              className="flex flex-row justify-between align-middle w-11/12 max-w-3xl m-auto"
+              className="h-full flex flex-row justify-between items-center w-11/12 max-w-3xl m-auto"
             >
               <li>
                 <Link href="/about" className="animate-fade-down">About</Link>
