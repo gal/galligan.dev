@@ -1,7 +1,11 @@
-import { cache } from "react";
+import firebase from '../../utils/db';
+import { getFirestore, collection, getDocs } from "firebase/firestore";
+
+const firestore = getFirestore(firebase)
 
 export default async function About() {
-  const data = await getData() as { id: string, body: string; }[];
+  const res = await getDocs(collection(firestore, "homepage"));
+  const data = res.docs.map((doc) => doc.data()) as { id: string, body: string; }[];
 
   return (
     <main>
@@ -42,14 +46,18 @@ export default async function About() {
   )
 }
 
-async function getData() {
-  return await cache(async () => {
-    try {
-      const data = await fetch(`${process.env.NEXT_BASE_URL}/api/about`, { next: { revalidate: 300 } }).then((res) => res.json());
-      return data;
-    } catch (error) {
-      console.log(error);
-      return [];
-    }
-  })()
-}
+export const revalidate = 300;
+// async function getStaticProps() {
+
+//   return {
+//     props: {
+//       data: getData()
+//     }
+//   }
+// }
+
+// async function getData() {
+//   const res = await getDocs(collection(firestore, "homepage"));
+//   const data = res.docs.map((doc) => doc.data()) as { id: string, body: string; }[];
+//   return data;
+// }
