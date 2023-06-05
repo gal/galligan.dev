@@ -1,7 +1,27 @@
 import firebase from '../../utils/db';
-import { getFirestore, collection, getDocs } from "firebase/firestore";
+import { getFirestore, collection, getDocs } from "firebase/firestore";import { Metadata } from "next"
 
 const firestore = getFirestore(firebase)
+
+export const metadata: Metadata = {
+  title: "About Thomas Daniel Galligan",
+  description: "Thomas Daniel Galligan is a software engineer based in Ireland.",
+  openGraph: {
+    type: "profile",
+    countryName: "Republic of Ireland",
+    description: "Thomas Daniel Galligan is a software engineer based in Ireland.",
+    locale: "en_IE",
+    alternateLocale: "en_US",
+    url: "https://gal.ie/about",
+    emails: [
+      "thomas@galligan.dev",
+    ],
+    firstName: "Thomas",
+    lastName: "Galligan",
+    gender: "male",
+    username: "gal | thomas007g",
+  },
+}
 
 export default async function About() {
   const res = await getDocs(collection(firestore, "homepage"));
