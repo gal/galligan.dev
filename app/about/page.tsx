@@ -55,7 +55,7 @@ export default async function About() {
               </div>
               <section className='mt-4'>
                 <h1 className='text-xl'>{experience.organization}</h1>
-                <h3 className='text-base font-semibold'>{experience.title}</h3>
+                <h2 className='text-base font-semibold'>{experience.title}</h2>
                 <p className='whitespace-pre-line'>{experience.description}</p>
               </section>
             </div>
