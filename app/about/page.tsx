@@ -1,3 +1,4 @@
+import ExperienceCarousel from "@/components/ExperienceCarousel";
 import { client } from "@/sanity/lib/client";
 import { urlForImage } from "@/sanity/lib/image";
 import { Experience } from "@/types";
@@ -45,11 +46,12 @@ export default async function About() {
           ))}
         </article>
       </div>
-      <div className='max-w-full overflow-hidden pb-20'>
-        <article id="experience"
+      <div className=''>
+        <ExperienceCarousel experiences={experienceList} />
+        {/* <article id="experience"
           className="p-5 lg:pl-[15dvw] lg:p-10 mx-auto flex flex-shrink-0 overflow-x-auto scroll snap-x snap-mandatory md:snap-always space-x-8 scrollbar-thin scrollbar-track-gray-400/20">
           {experienceList?.map((experience, i) => (
-            <div  key={i} className='flex flex-shrink-0 flex-col items-center snap-center w-[calc(100dvw-2rem)] md:w-[450px]'>
+            <div key={i} className='flex flex-shrink-0 flex-col items-center snap-center w-[calc(100dvw-2rem)] md:w-[450px]'>
               <div className='w-full aspect-video bg-black flex items-center justify-center'>
                 <img className='max-w-full aspect-video h-auto object-contain' src={urlForImage(experience.logo).url()} alt="" />
               </div>
@@ -60,19 +62,7 @@ export default async function About() {
               </section>
             </div>
           ))}
-          {/* {experienceList?.map((experience, i) => (
-          <div className='flex flex-shrink-0 flex-col items-center snap-center w-1/3 py-2 p-8 dark:bg-neutral-900/75 mx-4 '>
-            <div className='w-full aspect-video bg-black flex items-center justify-center'>
-              <img className='max-w-full aspect-video h-auto object-contain' src={urlForImage(experience.logo).url()} alt="" />
-            </div>
-            <section className='mt-4'>
-              <h1 className='text-xl'>{experience.organization}</h1>
-              <h3 className='text-base font-semibold'>{experience.title}</h3>
-              <p className='whitespace-pre-line'>{experience.description}</p>
-            </section>
-          </div>
-        ))} */}
-        </article>
+        </article> */}
       </div>
 
     </main >
