@@ -2,11 +2,26 @@ import { Metadata } from 'next'
 import './globals.css'
 import Link from 'next/link'
 
-
-// const inter = Inter({ subsets: ['latin'] })
-
 export const metadata: Metadata = {
-  viewport: "width=device-width, initial-scale=1", 
+  title: "About Thomas Daniel Galligan",
+  description: "Thomas Daniel Galligan is a software engineer based in Ireland.",
+  openGraph: {
+    type: "profile",
+    countryName: "Republic of Ireland",
+    description: "Thomas Daniel Galligan is a software engineer based in Ireland.",
+    locale: "en_IE",
+    alternateLocale: "en_US",
+    url: "https://gal.ie/about",
+    emails: [
+      "thomas@galligan.dev",
+    ],
+    firstName: "Thomas",
+    lastName: "Galligan",
+    gender: "male",
+    username: "gal | thomas007g",
+  },
+  viewport: "width=device-width, initial-scale=1.0"
+
 }
 
 export default function RootLayout({
