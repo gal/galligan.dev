@@ -1,23 +1,57 @@
-import { headers } from 'next/headers'
+import firebase from '../../utils/db';
+import { getFirestore, collection, getDocs } from "firebase/firestore";
+
+const firestore = getFirestore(firebase)
 
 export default async function Projects() {
-  const data = await getData() as {id: string, name: string, description: string, image: string}[];
+
+  const res = await getDocs(collection(firestore, "projects"));
+  const data = res.docs.map((doc) => doc.data()) as Project[];
+
   return (
     <main className="pt-20">
       {data.map((project) => (
         <div
           key={project.id}
-          className="max-w-md my-2 mx-auto bg-white dark:bg-opacity-5 rounded shadow-neutral-900 shadow-lg overflow-hidden md:max-w-5xl"
+          className="max-w-md px-4 py-2 my-4 mx-auto bg-gray-50 shadow-neutral-500 dark:bg-gray-600 dark:shadow-neutral-900 dark:bg-opacity-5 shadow-md overflow-hidden md:max-w-5xl"
         >
-          <div className="md:flex">
-            <div className="md:shrink-0">
-              <img className="h-64 w-full object-cover md:h-full md:w-80" src={project.image} alt={`Image for ${project.name}`} />
+          <div className="md:flex md:items-center">
+            <div className="md:shrink-0 h-48">
+              <img className="object-cover md:h-full md:w-80" src={project.image} alt={`Image for ${project.name}`} />
             </div>
             <div className="p-6">
               <div className="tracking-wide text-2xl">
                 {project.name}
               </div>
               <p className="mt-2">{project.description}</p>
+              <div className='flex justify-between items-center'>
+                <ul className='mt-2 flex flex-wrap text-sm'>
+                  {project.keywords?.map((keyword) => (
+                    <li key={keyword} className="inline-block bg-gray-300 rounded-full px-3 py-1 text-xs font-semibold text-gray-700 mr-2 mb-2">
+                      {keyword}
+                    </li>
+                  ))}
+                </ul>
+
+                <nav>
+                  <ul className="flex flex-wrap">
+                    {project.repo &&
+                      <li>
+                        <a className="text-blue-600 dark:text-blue-400 mx-2" href={project.repo}>
+                          Repository
+                        </a>
+                      </li>
+                    }
+                    {project.demo &&
+                      <li>
+                        <a className="text-blue-600 dark:text-blue-400 mx-2" href={project.demo}>
+                          Demo
+                        </a>
+                      </li>
+                    }
+                  </ul>
+                </nav>
+              </div>
             </div>
           </div>
         </div>
@@ -26,14 +60,4 @@ export default async function Projects() {
   )
 }
 
-async function getData() {
-  try {
-    const data = await fetch(`${process.env.NEXT_BASE_URL}/api/projects`, { next: { revalidate: 300 }}).then((res) => res.json());
-    return data;
-  } catch (error) {
-    console.log(error);
-    return [];
-  }
-}
-
-
+export const revalidate = 300;
