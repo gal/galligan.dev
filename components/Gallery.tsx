@@ -1,5 +1,6 @@
 "use client";
 
+import { GalleryImage } from "@/types";
 import { useState } from "react";
 
 interface GalleryProps {
@@ -84,7 +85,6 @@ const Gallery = (props: GalleryProps) => {
 
             <button disabled={currentIndex == 0} className={`absolute -left-20 top-0 bottom-0 text-3xl ${currentIndex == 0 ? "text-gray-400" : ""}`}
               onClick={(_) => {
-                console.log({ currentIndex })
                 goLeft()
               }}
             >&larr;</button>

@@ -31,8 +31,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>
-        <header className="fixed w-full h-10 backdrop-blur-sm">
+      <body className='scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-white/30'>
+        <header className="fixed w-full h-10 backdrop-blur-sm z-50">
           <nav className="h-full">
             <ul 
               className="h-full flex flex-row justify-between items-center w-11/12 max-w-3xl m-auto"

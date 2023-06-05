@@ -1,3 +1,5 @@
+import { Image } from "sanity";
+
 interface GalleryManifest {
   domain: string;
   images: galleryImage[];
@@ -15,10 +17,21 @@ interface AboutParagraph {
 
 interface Project {
   id: string;
-  name: string;
+  title: string;
   description: string;
   image?: string;
   keywords?: string[];
   repo?: string;
   demo?: string;
+}
+
+interface Experience {
+  organization: string;
+  title: string;
+  start: string;
+  end: string;
+  description: string;
+  keywords?: string[];
+  url: string;
+  logo: Image;
 }
