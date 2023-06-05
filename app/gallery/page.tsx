@@ -1,34 +1,13 @@
 import Gallery from "@/components/Gallery";
+import manifest from './manifest.json';
 
 export default async function GalleryPage() {
-  const data = await getData() as GalleryManifest;
+  const data = manifest as GalleryManifest;
+
   const images = data.images as GalleryImage[];
-
-  const columns: GalleryImage[][] = [[], [], [], []]
-  let counter = 0;
-  let index = 0;
-
-
-  images.forEach((image) => {
-    if (counter > 3) { counter = 0 }
-    image.index = index
-    columns[counter].push(image)
-    counter++
-    index++
-  })
   return (
-      <Gallery domain={data.domain} columns={columns} />
+      <Gallery domain={data.domain} images={images}/>
   )
 }
 
-async function getData() {
-  try {
-    const data = await fetch(`${process.env.NEXT_BASE_URL}/api/gallery`,
-      { next: { revalidate: 120 } }
-    ).then((res) => res.json());
-    return data as GalleryManifest;
-  } catch (error) {
-    console.log(error);
-    return [];
-  }
-}
+export const revalidate = 300;
