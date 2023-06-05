@@ -1,7 +1,7 @@
 import { redirect } from "next/navigation"
 import { Metadata } from "next"
 
-export const meta: Metadata = {
+export const metadata: Metadata = {
   title: "About Thomas Daniel Galligan",
   description: "Thomas Daniel Galligan is a software engineer based in Ireland.",
   openGraph: {

@@ -5,8 +5,8 @@ import Link from 'next/link'
 
 // const inter = Inter({ subsets: ['latin'] })
 
-export const meta: Metadata = {
-  
+export const metadata: Metadata = {
+  viewport: "width=device-width, initial-scale=1", 
 }
 
 export default function RootLayout({
