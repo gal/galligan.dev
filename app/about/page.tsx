@@ -47,7 +47,7 @@ export default async function About() {
       </div>
       <div className='max-w-full overflow-hidden pb-20'>
         <article id="experience"
-          className="p-5 md:pl-[30dvh] lg:p-10 mx-auto flex flex-shrink-0 overflow-x-auto scroll snap-x snap-mandatory md:snap-always space-x-8 scrollbar-thin scrollbar-track-gray-400/20">
+          className="p-5 lg:pl-[15dvw] lg:p-10 mx-auto flex flex-shrink-0 overflow-x-auto scroll snap-x snap-mandatory md:snap-always space-x-8 scrollbar-thin scrollbar-track-gray-400/20">
           {experienceList?.map((experience, i) => (
             <div  key={i} className='flex flex-shrink-0 flex-col items-center snap-center w-[calc(100dvw-2rem)] md:w-[450px]'>
               <div className='w-full aspect-video bg-black flex items-center justify-center'>
