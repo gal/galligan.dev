@@ -4,49 +4,34 @@ import { useState } from "react";
 
 interface GalleryProps {
   domain: string;
-  columns: GalleryImage[][];
+  images: GalleryImage[];
 }
 
 const Gallery = (props: GalleryProps) => {
   const [modalImg, setModalImg] = useState<null | string>(null)
   const [currentIndex, setCurrentIndex] = useState<null | number>(null)
-  const flattened = props.columns.flat();
-  flattened.sort((a, b) => a.index as number - (b.index as number))
 
   const goRight = () => {
-    console.log(currentIndex)
     if (currentIndex != null) {
       var nextIndex = currentIndex;
-      for (let i = 0; i < flattened.length; i++) {
-        if (currentIndex == flattened[i].index && currentIndex < flattened.length - 1) {
-          nextIndex = (currentIndex + 1)
-        }
-      }
-      const nextImg = flattened[nextIndex]
 
-      setModalImg(`https://${props.domain}/preview/${nextImg.url}`)
-      setCurrentIndex(nextIndex)
-    } else {
-      console.log("no current index")
+      if (currentIndex < props.images.length - 1) {
+        nextIndex++
+        setModalImg(`https://${props.domain}/preview/${props.images[nextIndex].url}`)
+        setCurrentIndex(nextIndex)
+      }
     }
   }
 
   const goLeft = () => {
     if (currentIndex != null) {
       var nextIndex = currentIndex;
-      for (let i = 0; i < flattened.length; i++) {
-        if (currentIndex == flattened[i].index && currentIndex > 0) {
-          nextIndex = (currentIndex - 1)
-        }
-      }
-      console.log(nextIndex)
-      const nextImg = flattened[nextIndex]
-      console.log(flattened[nextIndex])
 
-      setModalImg(`https://${props.domain}/preview/${nextImg.url}`)
-      setCurrentIndex(nextIndex)
-    } else {
-      console.log("no current index")
+      if (currentIndex > 0) {
+        nextIndex--
+        setModalImg(`https://${props.domain}/preview/${props.images[nextIndex].url}`)
+        setCurrentIndex(nextIndex)
+      }
     }
   }
 
@@ -64,21 +49,23 @@ const Gallery = (props: GalleryProps) => {
             }
           }
         }}
-        className="py-20 grid grid-cols-2 md:grid-cols-4 gap-4 max-w-5xl mx-auto ">
-        {props.columns.map((column, i) => (
-          <div key={i} className="grid gap-4 float-left">
-            {column.map((image, j) => (
-              <div key={`${i}${j}`}>
-                <img data-index={image.index}
-                  onClick={(e) => {
-                    console.log(parseInt(e.currentTarget?.getAttribute("data-index") as string))
-                    setModalImg(e.currentTarget.getAttribute("src"))
-                    setCurrentIndex(parseInt(e.currentTarget?.getAttribute("data-index") as string))
-                  }} className="cursor-pointer w-full h-auto" src={`https://${props.domain}/preview/${image.url}`} alt=""></img>
-              </div>
-            ))}
-          </div>
-        ))}
+        className="py-20 max-w-5xl mx-auto ">
+
+        <div className='columns-1 md:columns-3 lg:columns-4 gap-2'>
+          {props.images.map((image, i) => (
+            <img
+              src={`https://${props.domain}/preview/${image.url}`}
+              alt={image.alt}
+              className='w-full h-fit mb-2 cursor-pointer'
+              key={i} data-index={i}
+              onClick={(e) => {
+                setModalImg(e.currentTarget.getAttribute("src"))
+                setCurrentIndex(parseInt(e.currentTarget.getAttribute("data-index") as string))
+              }}
+            />
+          ))}
+        </div>
+
         <div id="modal"
           onClick={() => { setModalImg(null) }}
 
@@ -91,17 +78,18 @@ const Gallery = (props: GalleryProps) => {
               className="object-cover" alt="modal" />
 
             <a
-              className="absolute top-[100%] text-gray-300 bg-black bg-opacity-10 py-2 px-4 rounded"
+              className="absolute top-[100%] text-gray-300 bg-black bg-opacity-10 py-1 px-2 rounded"
               href={(modalImg as string)?.replace("preview", "fullsize")} target="_blank"
             >Open full image</a>
 
-            <button className="absolute -left-20 top-0 bottom-0 text-3xl"
+            <button disabled={currentIndex == 0} className={`absolute -left-20 top-0 bottom-0 text-3xl ${currentIndex == 0 ? "text-gray-400" : ""}`}
               onClick={(_) => {
                 console.log({ currentIndex })
                 goLeft()
               }}
             >&larr;</button>
-            <button className="absolute -right-20 top-0 bottom-0 text-3xl"
+            <button disabled={currentIndex == (props.images.length - 1)}
+              className={`absolute -right-20 top-0 bottom-0 text-3xl ${currentIndex == (props.images.length - 1) ? "text-gray-400" : ""}`}
               onClick={(_) => {
                 goRight()
               }}
