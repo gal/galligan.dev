@@ -1,4 +1,4 @@
-"use client";
+// "use client";
 
 import { urlForImage } from "@/sanity/lib/image";
 import { Experience } from "@/types"
@@ -11,13 +11,11 @@ export default function ExperienceCarousel(props: ExperienceCarouselProps) {
 
   return (
 
-    <div id="experience"
-      className='w-full'
-    >
-      <div className='p-5 md:p-10 flex flex-nowrap overflow-x-auto sm:snap-mandatory sm:snap-x'>
-        {/* <div className='grid grid-flow-col grid-rows-1 justify-center overflow-auto sm:snap-x sm:snap-always'> */}
+    <div id="experience" className='w-full'>
+      <div className='p-5 md:p-10 flex flex-nowrap overflow-x-auto snap-mandatory snap-x md:snap-none'>
         {props.experiences.map((experience, i) => (
-          <div key={i} className={`inline-block flex-shrink-0 mx-[12px] w-[calc(100dvw-2rem)] md:w-[400px] sm:snap-center ${i == 0 ? "ml-auto" : ""} ${i == (props.experiences.length - 1) ? 'mr-auto' : ""}`}>
+          <div key={i} className={`inline-block flex-shrink-0 mx-[12px] w-[calc(100dvw-2rem)] md:w-[400px] lg:w-[450px] 
+          sm:snap-center ${i == 0 ? "ml-auto" : ""} ${i == (props.experiences.length - 1) ? 'mr-auto' : ""}`}>
             <div className='aspect-video px-2 bg-black flex justify-center items-center'>
               <img
                 className='max-w-full aspect-video h-auto object-contain'
