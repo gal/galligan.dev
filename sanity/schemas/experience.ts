@@ -6,6 +6,11 @@ export default defineType({
   type: 'document',
   fields: [
     defineField({
+      name: 'order',
+      title: 'Order',
+      type: 'number',
+    }),
+    defineField({
       name: 'organization',
       title: 'Organization',
       type: 'string',

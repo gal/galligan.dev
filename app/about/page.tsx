@@ -8,7 +8,7 @@ export default async function About() {
   const homepageQuery = groq`*[_type == "homepage"][0]`
   const homepage = await client.fetch(homepageQuery) as { body: string[]; };
 
-  const experienceQuery = groq`*[_type == "experience"] | order(end desc)`
+  const experienceQuery = groq`*[_type == "experience"] | order(order asc)`
   const experienceList = await client.fetch(experienceQuery) as Experience[];
 
   return (
