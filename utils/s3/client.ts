@@ -1,6 +1,5 @@
 import { Album } from "@/types";
 import { ListObjectsV2Command, S3Client } from "@aws-sdk/client-s3";
-import { kMaxLength } from "buffer";
 
 const s3_client_id = process.env.NEXT_S3_CLIENT_ID || "MISSING CLIENT ID";
 const s3_client_key = process.env.NEXT_S3_CLIENT_KEY || "MISSING CLIENT KEY";
@@ -89,7 +88,7 @@ export const getAlbumPhotos = async (album: string) => {
 };
 
 export const client = new S3Client({
-  region: process.env.AWS_REGION,
+  region: s3_client_region,
   credentials: {
     accessKeyId: s3_client_id,
     secretAccessKey: s3_client_key,
