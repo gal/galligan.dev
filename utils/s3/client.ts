@@ -1,32 +1,38 @@
-import { Album } from '@/types';
-import { ListObjectsV2Command, S3Client } from '@aws-sdk/client-s3';
-import { kMaxLength } from 'buffer';
+import { Album } from "@/types";
+import { ListObjectsV2Command, S3Client } from "@aws-sdk/client-s3";
+import { kMaxLength } from "buffer";
 
-const s3_client_id = process.env.NEXT_S3_CLIENT_ID || 'MISSING CLIENT ID';
-const s3_client_key = process.env.NEXT_S3_CLIENT_KEY || 'MISSING CLIENT KEY';
-const s3_bucket = process.env.NEXT_S3_BUCKET_NAME || 'MISSING CLIENT BUCKET';
-export const s3_client_region = process.env.NEXT_S3_CLIENT_REGION || 'MISSING CLIENT REGION';
-export const cloudfront_url = process.env.NEXT_CLOUDFRONT_URL || 'MISSING CLOUDFRONT URL';
+const s3_client_id = process.env.NEXT_S3_CLIENT_ID || "MISSING CLIENT ID";
+const s3_client_key = process.env.NEXT_S3_CLIENT_KEY || "MISSING CLIENT KEY";
+const s3_bucket = process.env.NEXT_S3_BUCKET_NAME || "MISSING CLIENT BUCKET";
+export const s3_client_region =
+  process.env.NEXT_S3_CLIENT_REGION || "MISSING CLIENT REGION";
+export const cloudfront_url =
+  process.env.NEXT_CLOUDFRONT_URL || "MISSING CLOUDFRONT URL";
 
-export const getBucketObjects = async (prefix: string, folders = false, delim = "/") => {
+export const getBucketObjects = async (
+  prefix: string,
+  folders = false,
+  delim = "/"
+) => {
   const cmd = new ListObjectsV2Command({
     Bucket: s3_bucket,
     Prefix: prefix,
-  })
+  });
 
   return (await client.send(cmd)).Contents?.map((item) => {
-    return item.Key!.replace(prefix, '');
-  })
-}
+    return item.Key!.replace(prefix, "");
+  });
+};
 
 export const getAlbum = async (album: string) => {
   const albums = await getAlbums();
   return albums.find((item) => item.slug === album);
-}
+};
 
 export const getAlbums = async () => {
   // return await getBucketObjects('albums/', true);
-  const objects = await getBucketObjects('albums/', true);
+  const objects = await getBucketObjects("albums/", true);
   const albums = [] as Album[];
   const albumItems = new Map<string, string[]>();
   const covers = new Map<string, string>();
@@ -38,7 +44,7 @@ export const getAlbums = async () => {
   objects.shift();
 
   for (const object of objects) {
-    const parts = object.split('/');
+    const parts = object.split("/");
     const album = parts[0];
 
     if (parts.length === 2) {
@@ -57,19 +63,21 @@ export const getAlbums = async () => {
   }
 
   for (const album of albumItems.keys()) {
-    if (!covers.has(album)) { covers.set(album, '') }
+    if (!covers.has(album)) {
+      covers.set(album, "");
+    }
     albums.push({
       name: album,
       slug: album,
-      cover: cloudfront_url + '/albums/'+ covers.get(album),
+      cover: cloudfront_url + "/albums/" + covers.get(album),
       photos: albumItems.get(album) || [],
     });
   }
 
-  console.log(albums)
+  console.log(albums);
 
-  return albums
-}
+  return albums;
+};
 // export const getAlbumCover = async (album: string) => {
 //   const objects = await getBucketObjects(`albums/${album}/cover.jpg`)
 //   // find first object that is not a folder
@@ -77,8 +85,8 @@ export const getAlbums = async () => {
 // }
 
 export const getAlbumPhotos = async (album: string) => {
-  return await getBucketObjects(`albums/${album}/`)
-}
+  return await getBucketObjects(`albums/${album}/`);
+};
 
 export const client = new S3Client({
   region: process.env.AWS_REGION,

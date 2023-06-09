@@ -1,40 +1,40 @@
-import { defineField, defineType } from 'sanity'
+import { defineField, defineType } from "sanity";
 
 export default defineType({
-  name: 'project',
-  title: 'Project',
-  type: 'document',
+  name: "project",
+  title: "Project",
+  type: "document",
   fields: [
     defineField({
-      name: 'title',
-      title: 'Title',
-      type: 'string',
+      name: "title",
+      title: "Title",
+      type: "string",
     }),
     defineField({
-      name: 'description',
-      title: 'description',
-      type: 'text',
+      name: "description",
+      title: "description",
+      type: "text",
     }),
     defineField({
-      name: 'image',
-      title: 'Image',
-      type: 'string',
+      name: "image",
+      title: "Image",
+      type: "string",
     }),
     defineField({
-      name: 'keywords',
-      title: 'Keywords',
-      type: 'array',
-      of: [{ type: 'string' }],
+      name: "keywords",
+      title: "Keywords",
+      type: "array",
+      of: [{ type: "string" }],
     }),
     defineField({
-      name: 'repo',
-      title: 'Repository',
-      type: 'url',
+      name: "repo",
+      title: "Repository",
+      type: "url",
     }),
     defineField({
-      name: 'demo',
-      title: 'Demo',
-      type: 'url',
+      name: "demo",
+      title: "Demo",
+      type: "url",
     }),
   ],
 
@@ -49,4 +49,4 @@ export default defineType({
   //     return { ...selection, subtitle: author && `by ${author}` }
   //   },
   // },
-})
+});

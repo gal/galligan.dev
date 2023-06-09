@@ -1,7 +1,7 @@
-import manifest from './manifest.json'
+import manifest from "./manifest.json";
 
 export async function GET(request: Request) {
   return new Response(JSON.stringify(manifest), {
-    headers: { 'Content-Type': 'application/json' },
-  })
+    headers: { "Content-Type": "application/json" },
+  });
 }

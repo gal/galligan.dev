@@ -6,9 +6,9 @@ const nextConfig = {
         source: "/",
         destination: "/about",
         permanent: true,
-      }
-    ]
-  }
-}
+      },
+    ];
+  },
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;

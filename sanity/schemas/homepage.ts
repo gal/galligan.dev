@@ -1,15 +1,15 @@
-import { defineField, defineType } from 'sanity'
+import { defineField, defineType } from "sanity";
 
 export default defineType({
-  name: 'homepage',
-  title: 'Homepage',
-  type: 'document',
+  name: "homepage",
+  title: "Homepage",
+  type: "document",
   fields: [
     defineField({
-      name: 'body',
-      title: 'Body',
-      type: 'array',
-      of: [{ type: 'text' }],
+      name: "body",
+      title: "Body",
+      type: "array",
+      of: [{ type: "text" }],
     }),
   ],
 
@@ -24,4 +24,4 @@ export default defineType({
   //     return { ...selection, subtitle: author && `by ${author}` }
   //   },
   // },
-})
+});
