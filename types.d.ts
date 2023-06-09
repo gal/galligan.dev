@@ -35,3 +35,10 @@ interface Experience {
   url: string;
   logo: Image;
 }
+
+interface Album {
+  name: string;
+  slug: string;
+  cover: string;
+  photos: string[];
+}

@@ -44,7 +44,7 @@ export default function RootLayout({
                 <Link href="/projects" className="animate-fade-down">Projects</Link>
               </li>
               <li>
-                <Link href="/gallery" className="animate-fade-down">Gallery</Link>
+                <Link href="/albums" className="animate-fade-down">Albums</Link>
               </li>
             </ul>
           </nav>
