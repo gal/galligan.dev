@@ -14,15 +14,11 @@ export default async function AlbumPage({
     <div className="pt-20 md:px-2 columns-1 md:columns-3 gap-2">
       {album.photos.map((image, i) => (
         <img
-          src={`${cloudfront_url}/albums/${album.name}/fullsize/${image}`}
+          src={`${cloudfront_url}/albums/${album.name}/${image}`}
           alt={image}
           className="w-full h-fit mb-2 cursor-pointer"
           key={i}
           data-index={i}
-          // onClick={(e) => {
-          //   setModalImg(e.currentTarget.getAttribute("src"))
-          //   setCurrentIndex(parseInt(e.currentTarget.getAttribute("data-index") as string))
-          // }}
         />
       ))}
     </div>

@@ -31,11 +31,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-white/30">
-        <header className="fixed w-full h-10 backdrop-blur-sm z-50">
+        <header className="fixed w-full h-10 backdrop-blur-sm bg-black/20 z-50">
           <nav className="h-full">
-            <ul className="h-full flex flex-row justify-between items-center w-11/12 max-w-3xl m-auto">
+            <ul className="h-full flex flex-row justify-between items-center w-11/12 max-w-3xl m-auto box-border">
               <li>
-                <Link href="/about" className="animate-fade-down">
+                <Link href="/about" className="animate-fade-down hover:bg-black/20 p-4">
                   About
                 </Link>
               </li>

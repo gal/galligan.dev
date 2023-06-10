@@ -45,14 +45,10 @@ export const getAlbums = async () => {
   for (const object of objects) {
     const parts = object.split("/");
     const album = parts[0];
-
-    if (parts.length === 2) {
-      // this is a cover image
-      covers.set(album, object);
+    if (parts.length === 1) {
       continue;
     }
-
-    const photo = parts[2];
+    const photo = parts[1];
 
     if (albumItems.has(album)) {
       albumItems.get(album)!.push(photo);
@@ -65,10 +61,11 @@ export const getAlbums = async () => {
     if (!covers.has(album)) {
       covers.set(album, "");
     }
+
     albums.push({
       name: album,
       slug: album,
-      cover: cloudfront_url + "/albums/" + covers.get(album),
+      cover: cloudfront_url + "/albums/" + album + ".jpg",
       photos: albumItems.get(album) || [],
     });
   }
@@ -82,10 +79,6 @@ export const getAlbums = async () => {
 //   // find first object that is not a folder
 //   return objects?.find((item) => !item.endsWith('.jpg'))
 // }
-
-export const getAlbumPhotos = async (album: string) => {
-  return await getBucketObjects(`albums/${album}/`);
-};
 
 export const client = new S3Client({
   region: s3_client_region,
