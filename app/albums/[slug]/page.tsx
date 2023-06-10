@@ -16,7 +16,7 @@ export default async function AlbumPage({
         <img
           src={`${cloudfront_url}/albums/${album.name}/${image}`}
           alt={image}
-          className="w-full h-fit mb-2 cursor-pointer"
+          className="w-full h-fit mb-2"
           key={i}
           data-index={i}
         />
