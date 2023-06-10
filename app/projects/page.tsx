@@ -18,7 +18,7 @@ export default async function Projects() {
       {data.map((project) => (
         <div
           key={project.id}
-          className="max-w-md px-4 py-2 my-4 mx-auto bg-gray-50 shadow-neutral-500 dark:bg-gray-600 dark:shadow-neutral-900 dark:bg-opacity-5 shadow-md overflow-hidden md:max-w-5xl"
+          className="max-w-md px-4 py-2 my-4 mx-auto bg-gray-50 shadow-neutral-500 shadow-md overflow-hidden md:max-w-5xl"
         >
           <div className="md:flex md:items-center">
             <div className="md:shrink-0 h-48">
@@ -48,7 +48,7 @@ export default async function Projects() {
                     {project.repo && (
                       <li>
                         <a
-                          className="text-blue-600 dark:text-blue-400 mx-2"
+                          className="text-blue-600 mx-2"
                           href={project.repo}
                         >
                           Repository
@@ -58,7 +58,7 @@ export default async function Projects() {
                     {project.demo && (
                       <li>
                         <a
-                          className="text-blue-600 dark:text-blue-400 mx-2"
+                          className="text-blue-600 mx-2"
                           href={project.demo}
                         >
                           Demo

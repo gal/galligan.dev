@@ -32,7 +32,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="scrollbar-thin bg-lightbg scrollbar-track-gray-400/20 scrollbar-thumb-white/30">
-        <header className="fixed w-full h-12 backdrop-blur-sm bg-lightbg dark:bg-black/0 z-50">
+        <header className="fixed w-full h-12 backdrop-blur-sm bg-lightbg z-50">
           <nav className="h-full">
             <NavigationList />
           </nav>
