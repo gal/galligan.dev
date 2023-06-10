@@ -14,7 +14,7 @@ export default async function Projects() {
   const data = (await client.fetch(projectQuery)) as Project[];
 
   return (
-    <main className="pt-20">
+    <main>
       {data.map((project) => (
         <div
           key={project.id}

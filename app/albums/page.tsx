@@ -9,7 +9,7 @@ export default async function GalleryPage() {
   const albums = (await getAlbums()) as Album[];
 
   return (
-    <div className="min-h-[100dvh] flex flex-nowrap items-center overflow-x-auto md:mx-16">
+    <div className="min-h-[80dvh] flex flex-nowrap items-center overflow-x-auto md:mx-16 place-self-center">
       {albums?.map((album, i) => (
         <AlbumCard id={i} key={i} album={album} />
       ))}

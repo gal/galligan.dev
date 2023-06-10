@@ -11,7 +11,7 @@ export default async function AlbumPage({
 
   const album = (await getAlbum(albumName)) as Album;
   return (
-    <div className="pt-20 md:px-2 columns-1 md:columns-3 gap-2">
+    <div className="md:px-2 columns-1 md:columns-3 gap-2">
       {album.photos.map((image, i) => (
         <img
           src={`${cloudfront_url}/albums/${album.name}/${image}`}
