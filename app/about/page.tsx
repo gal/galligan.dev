@@ -21,12 +21,13 @@ export default async function About() {
         <nav className="mt-4" aria-label="quick links for portfolio">
           <ul className="animate-fade-up flex flex-row justify-evenly align-middle max-w-lg mx-auto">
             <li>
-              <a className="px-2 underline" href="https://github.com/gal/">
+              <a target="_blank" className="px-2 underline" href="https://github.com/gal/">
                 GitHub
               </a>
             </li>
             <li>
               <a
+                target="_blank"
                 className="px-2 underline"
                 href="https://linkedin.com/in/gal1/"
               >
@@ -34,7 +35,7 @@ export default async function About() {
               </a>
             </li>
             <li>
-              <a className="px-2 underline" href="/resume.pdf">
+              <a target="_blank" className="px-2 underline" href="/resume.pdf">
                 Resume
               </a>
             </li>
