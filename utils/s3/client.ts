@@ -65,7 +65,7 @@ export const getAlbums = async () => {
     albums.push({
       name: album,
       slug: album,
-      cover: cloudfront_url + "/albums/" + album + ".jpg",
+      cover: cloudfront_url + "/albums/" + album + ".webp",
       photos: albumItems.get(album) || [],
     });
   }
