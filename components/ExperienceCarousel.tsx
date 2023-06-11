@@ -32,8 +32,8 @@ export default function ExperienceCarousel(props: ExperienceCarouselProps) {
               <p className="whitespace-pre-line">{experience.description}</p>
 
               <ul className="mt-2 space-x-4">
-                {experience.technologies?.map((technology, i) => (
-                  <img src={urlForImage(technology.logo).url()} alt={`Logo for ${technology.name}`}
+                {experience.technologies?.map((technology, j) => (
+                  <img key={j} src={urlForImage(technology.logo).url()} alt={`Logo for ${technology.name}`}
                     title={technology.name} className="h-8 w-8 grayscale inline"
                   />
                 ))}
