@@ -70,8 +70,6 @@ export const getAlbums = async () => {
     });
   }
 
-  console.log(albums);
-
   return albums;
 };
 // export const getAlbumCover = async (album: string) => {

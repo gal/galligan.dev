@@ -32,7 +32,13 @@ interface Experience {
   end: string;
   description: string;
   keywords?: string[];
+  technologies?: Technology[];
   url: string;
+  logo: Image;
+}
+
+interface Technology {
+  name: string;
   logo: Image;
 }
 

@@ -1,7 +1,13 @@
 import { Metadata } from "next";
 import "./globals.css";
-import Link from "next/link";
 import NavigationList from "@/components/NavigationList";
+import { Poppins } from 'next/font/google'
+
+const poppins = Poppins({
+  weight: "400",
+  subsets: ['latin'],
+  display: 'swap'
+})
 
 export const metadata: Metadata = {
   title: "About Thomas Daniel Galligan",
@@ -31,13 +37,18 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="scrollbar-thin bg-lightbg scrollbar-track-gray-400/20 scrollbar-thumb-white/30">
-        <header className="fixed w-full h-12 backdrop-blur-sm bg-lightbg z-50">
-          <nav className="h-full">
-            <NavigationList />
-          </nav>
-        </header>
-        <div className="pt-12 min-h-[100dvh]">{children}</div>
+      <body className="scrollbar-thin bg-lightbg scrollbar-track-black/90 scrollbar-thumb-white">
+        <div aria-label="font provider" className={poppins.className}>
+
+          <header className="fixed w-full h-12 backdrop-blur-sm bg-lightbg z-50">
+            <nav className="h-full">
+              <NavigationList />
+            </nav>
+          </header>
+          <div className="pt-12 min-h-[100dvh]">
+            {children}
+          </div>
+        </div>
       </body>
     </html>
   );

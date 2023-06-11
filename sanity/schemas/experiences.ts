@@ -1,8 +1,8 @@
 import { defineField, defineType } from "sanity";
 
 export default defineType({
-  name: "experience",
-  title: "Experience",
+  name: "experiences",
+  title: "Experiences",
   type: "document",
   fields: [
     defineField({
@@ -39,22 +39,16 @@ export default defineType({
       type: "array",
       of: [{ type: 'reference', to: { type: 'technology'} }],
     }),
-    // defineField({
-    //   name: "keywords",
-    //   title: "Keywords",
-    //   type: "array",
-    //   of: [{ type: "string" }],
-    // }),
     defineField({
       name: "url",
       title: "URL",
       type: "url",
     }),
     defineField({
-  name: "logo",
-  title: "Logo",
-  type: "image",
-}),
+      name: "logo",
+      title: "Logo",
+      type: "image",
+    }),
   ],
 
   // preview: {

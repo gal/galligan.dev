@@ -7,7 +7,9 @@ import { type SchemaTypeDefinition } from "sanity";
 import project from "./schemas/project";
 import homepage from "./schemas/homepage";
 import experience from "./schemas/experience";
+import experiences from "./schemas/experiences";
+import technology from "./schemas/techology";
 
 export const schema: { types: SchemaTypeDefinition[] } = {
-  types: [project, homepage, experience],
+  types: [project, homepage, technology, experience],
 };

@@ -7,8 +7,8 @@ interface ExperienceCarouselProps {
 
 export default function ExperienceCarousel(props: ExperienceCarouselProps) {
   return (
-    <div id="experience" className="w-full">
-      <div className="p-5 md:p-10 flex flex-nowrap overflow-x-auto snap-mandatory snap-x md:snap-none">
+    <div id="experience" className="h-full">
+      <div className="md:p-10 flex flex-nowrap overflow-x-auto snap-mandatory snap-x md:snap-none">
         {props.experiences.map((experience, i) => (
           <div
             key={i}
@@ -16,17 +16,28 @@ export default function ExperienceCarousel(props: ExperienceCarouselProps) {
           sm:snap-center ${i == 0 ? "ml-auto" : ""} ${i == props.experiences.length - 1 ? "mr-auto" : ""
               }`}
           >
-            <img
-              className="mx-auto md:h-36 md:w-36 lg:h-64 lg:w-64 object-cover object-center rounded-full bg-white"
-              src={urlForImage(experience.logo).url()}
-              alt={`Logo for ${experience.organization}`}
-            />
+            <div className="w-36 h-36 md:h-52 md:w-52 lg:w-80 lg:h-80 flex justify-center items-center rounded-full mx-auto bg-white">
+              <img
+                className="mx-auto h-16 w-16 md:h-24 md:w-24 lg:h-48 lg:w-48 object-cover object-center"
+                src={urlForImage(experience.logo).url()}
+                alt={`Logo for ${experience.organization}`}
+              />
+            </div>
+
             <div className="mt-4 p-2 md:p-5">
               <h1 className="text-xl">{experience.organization}</h1>
 
               <h2 className="text-lg font-semibold">{experience.title}</h2>
 
               <p className="whitespace-pre-line">{experience.description}</p>
+
+              <ul className="mt-2 space-x-4">
+                {experience.technologies?.map((technology, i) => (
+                  <img src={urlForImage(technology.logo).url()} alt={`Logo for ${technology.name}`}
+                    title={technology.name} className="h-8 w-8 grayscale inline"
+                  />
+                ))}
+              </ul>
             </div>
           </div>
         ))}
