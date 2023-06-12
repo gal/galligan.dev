@@ -8,11 +8,11 @@ interface ExperienceCarouselProps {
 export default function ExperienceCarousel(props: ExperienceCarouselProps) {
   return (
     <div id="experience" className="h-full">
-      <div className="md:p-10 flex flex-nowrap overflow-x-auto snap-mandatory snap-x md:snap-none">
+      <div className="scrollbar-none md:p-10 flex flex-nowrap overflow-x-auto snap-mandatory snap-x md:snap-none">
         {props.experiences.map((experience, i) => (
           <div
             key={i}
-            className={`inline-block flex-shrink-0 mx-[12px] w-[calc(100dvw-2rem)] md:w-[400px] lg:w-[600px] 
+            className={`scrollbar-none inline-block flex-shrink-0 mx-[12px] w-[calc(100dvw-2rem)] md:w-[400px] lg:w-[600px] 
           sm:snap-center ${i == 0 ? "ml-auto" : ""} ${i == props.experiences.length - 1 ? "mr-auto" : ""
               }`}
           >
