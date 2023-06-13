@@ -33,8 +33,8 @@ export default function ExperienceCarousel(props: ExperienceCarouselProps) {
 
               <ul className="mt-2 space-x-4 flex">
                 {experience.technologies?.map((technology, j) => (
-                  <li className="inline">
-                    <img key={j} src={urlForImage(technology.logo).url()} alt={`Logo for ${technology.name}`}
+                  <li key={i} className="inline">
+                    <img src={urlForImage(technology.logo).url()} alt={`Logo for ${technology.name}`}
                       title={technology.name} className="h-8 w-8 grayscale"
                     />
                   </li>
