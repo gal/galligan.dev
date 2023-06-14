@@ -16,9 +16,9 @@ export default function ExperienceCarousel(props: ExperienceCarouselProps) {
           sm:snap-center ${i == 0 ? "ml-auto" : ""} ${i == props.experiences.length - 1 ? "mr-auto" : ""
               }`}
           >
-            <div className="w-36 h-36 md:h-52 md:w-52 lg:w-80 lg:h-80 flex justify-center items-center rounded-full mx-auto bg-white">
+            <div className="w-36 h-36 md:h-52 md:w-52 lg:w-64 lg:h-64 flex justify-center items-center rounded-full mx-auto bg-white">
               <img
-                className="mx-auto h-16 w-16 md:h-24 md:w-24 lg:h-48 lg:w-48 object-cover object-center"
+                className="mx-auto h-16 w-16 md:h-24 md:w-24 lg:h-40 lg:w-40 object-cover object-center"
                 src={urlForImage(experience.logo).url()}
                 alt={`Logo for ${experience.organization}`}
               />
