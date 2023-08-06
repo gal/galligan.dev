@@ -40,12 +40,12 @@ export default function RootLayout({
       <body className="scrollbar-thin bg-lightbg scrollbar-track-black/90 scrollbar-thumb-white">
         <div aria-label="font provider" className={poppins.className}>
 
-          <header className="fixed w-full h-12 backdrop-blur-sm bg-lightbg z-50">
+          <header className="fixed bg-black w-full h-14 z-50 opacity-75">
             <nav className="h-full">
               <NavigationList />
             </nav>
           </header>
-          <div className="pt-12 min-h-[100dvh]">
+          <div className="pt-14 min-h-[100dvh]">
             {children}
           </div>
         </div>

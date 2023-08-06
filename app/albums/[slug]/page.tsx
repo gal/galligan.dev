@@ -1,20 +1,21 @@
 import Gallery from "@/components/Gallery";
 import { Album } from "@/types";
-import { cloudfront_url, getAlbum } from "@/utils/s3/client";
+import { cloudfront_url } from "@/utils/s3/client";
+import { getAlbum, getProgressive } from "../albums";
 
 export default async function AlbumPage({
   params,
 }: {
   params: { slug: string };
 }) {
-  const albumName = params.slug;
+  const album = getAlbum(params.slug);
 
-  const album = (await getAlbum(albumName)) as Album;
+  // const album = (await getAlbum(albumName)) as Album;
   return (
-    <div className="md:px-16 lg:px-48 columns-1 md:columns-2 lg:columns-3 gap-2">
-      {album.photos.map((image, i) => (
+    <div className="">
+      {album?.photos.map((image, i) => (
         <img
-          src={`${cloudfront_url}/albums/${album.name}/${image}`}
+          src={getProgressive(image)}
           alt={image}
           className="w-full h-fit mb-2"
           key={i}
