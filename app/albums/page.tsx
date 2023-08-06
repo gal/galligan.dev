@@ -7,9 +7,6 @@ import { Album } from "@/types";
 import { getAlbums } from "@/utils/s3/client";
 
 export default async function GalleryPage() {
-  // const albums = (await getAlbums()) as Album[];
-  
-
   return (
     <div className="columns-1 md:columns-2 lg:columns-4 gap-0.5 max-w-full">
       {albums.map((album, i) => (

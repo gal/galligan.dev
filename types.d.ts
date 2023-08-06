@@ -47,4 +47,5 @@ interface Album {
   slug: string;
   cover: string;
   photos: string[];
+  description?: string;
 }

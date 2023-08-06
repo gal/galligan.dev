@@ -4,98 +4,104 @@ export const BASE_URL = "https://d2kxt83yjeiafa.cloudfront.net/albums2";
 
 export const getAlbum = (slug: string) => albums.find(album => album.slug === slug);
 
-export const getAlbumCover = (imageName: string) => BASE_URL + "/web-optimized/" + imageName;
-export const getProgressive = (imageName: string) => BASE_URL + "/progressive/" + imageName;
-export const getHd = (imageName: string) => BASE_URL + "/hd/" + imageName;
+export const getSmall = (imageName: string) => BASE_URL + "/small/" + imageName + ".jpg";
+export const getWebp = (imageName: string) => BASE_URL + "/webp/" + imageName + ".webp";
+export const getJpg = (imageName: string) => BASE_URL + "/web/" + imageName + ".jpg";
+export const getBlur = (imageName: string) => BASE_URL + "/blur/" + imageName+ ".jpg";
+export const getHd = (imageName: string) => BASE_URL + "/hd/" + imageName + ".jpg";
 
 const albums: Album[] = [
   {
-    name: "Super Liminal",
-    photos: ["DSC00294.jpg",
+    name: "Retro",
+    photos: ["DSC00294",
     ],
-    cover: "DSC00294.jpg",
-    slug: "super-liminal"
+    cover: "DSC00294",
+    slug: "retro",
+    description: "There's something about the retro aesthetic that I find very appealing. I think this photo captures some interesting colors really nicely here."
   },
   {
-    name: "Liminal Nature",
+    name: "Minimalist Nature",
     photos: [
-      "DSC00278.jpg",
+      "DSC00278",
     ],
-    cover: "DSC00278.jpg",
-    slug: "liminal-nature"
+    cover: "DSC00278",
+    slug: "minimalist-nature",
+    description: "I love the minimalist aesthetic. I think minimalism surrounded by or in nature is a very interesting combination."
   },
   {
     name: "Victoria Street",
     photos: [
-      "DSC00632.jpg",
-      "DSC00777.jpg",
-      "DSC00630.jpg"
+      "DSC00632",
+      "DSC00777",
+      "DSC00630",
     ],
-    cover: "DSC00632.jpg",
+    cover: "DSC00632",
     "slug": "victoria-street"
   },
   {
     name: "Birds",
     photos: [
-      "DSC00232.jpg",
-      "DSC00231.jpg",
-      "DSC00268.jpg",
+      "DSC00232",
+      "DSC00231",
+      "DSC00268",
     ],
-    cover: "DSC00232.jpg",
+    cover: "DSC00232",
     slug: "cork"
   },
   {
     name: "Nature",
     photos: [
-      ""
+      "DSC00616",
+      "DSC00103",
+      "DSC01119",
     ],
-    cover: "DSC00616.jpg",
+    cover: "DSC00616",
     slug: "nature"
   },
   {
     name: "Stained Glass",
     photos: [
-      "DSC00658.jpg",
-      "DSC00650.jpg",
-      "DSC00656.jpg",
-      "DSC00674.jpg",
+      "DSC00658",
+      "DSC00650",
+      "DSC00656",
+      "DSC00674",
     ],
-    cover: "DSC00658.jpg",
+    cover: "DSC00658",
     slug: "stained-glass"
   },
   {
     name: "Monumental",
     photos: [
-      "DSC00785.jpg"
+      "DSC00785"
     ],
-    cover: "DSC00785.jpg",
+    cover: "DSC00785",
     slug: "monumental"
   },
   {
     name: "Sea-side",
     photos: [
-      "DSC00958.jpg",
-      "DSC00954.jpg",
-      "DSC00975.jpg",
+      "DSC00958",
+      "DSC00954",
+      "DSC00975",
     ],
-    cover: "DSC00958.jpg",
+    cover: "DSC00958",
     slug: "sea-side"
   },
   {
     name: "Liminal Architecture",
     photos: [
-      "DSC00421.jpg",
-      "DSC00705.jpg"
+      "DSC00421",
+      "DSC00705"
     ],
-    cover: "DSC00421.jpg",
+    cover: "DSC00421",
     slug: "liminal-architecture"
   },
   {
     name: "Perspective",
     photos: [
-      "DSC00708.jpg"
+      "DSC00708"
     ],
-    cover: "DSC00708.jpg",
+    cover: "DSC00708",
     slug: "perspective"
   },
 ]
