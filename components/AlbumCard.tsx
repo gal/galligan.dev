@@ -1,4 +1,4 @@
-import { getWebp } from "@/app/albums/albums";
+import { getJpg, getWebp } from "@/app/albums/albums";
 import { Album } from "@/types";
 
 interface AlbumCardProps {
@@ -13,7 +13,7 @@ export default function AlbumCard(props: AlbumCardProps) {
       <a href={`albums/${props.album.slug}`}>
         {/* <div> */}
           <img
-            src={getWebp(props.album.cover)}
+            src={getJpg(props.album.cover)}
             alt={props.album.name}
             className="object-cover w-full h-full"
           />
