@@ -9,7 +9,7 @@ interface AlbumCardProps {
 export default function AlbumCard(props: AlbumCardProps) {
   return (
     // <div className="flex-shrink-0 h-[500px] w-min-[300px] w-[300px] md:w-[450px] lg:w-[500px] first:ml-auto last:mr-auto">
-    <div className="h-fit relative mb-0.5 w-full">
+    <div className="relative mb-5 w-full">
       <a href={`albums/${props.album.slug}`}>
         {/* <div> */}
           <img
