@@ -37,7 +37,7 @@ export default function ShareBtn(props: { album: Album }) {
         Share
       </button>
 
-      <div className={`bg-black flex justify-center items-center fixed bottom-0 left-0 w-full h-16 ${copied ? "opacity-100" : "opacity-0"}`}>
+      <div className={`bg-black flex justify-center items-center fixed bottom-0 left-0 w-full h-16 ${copied ? "" : "hidden"}`}>
         Link copied to clipboard
       </div>
     </>
