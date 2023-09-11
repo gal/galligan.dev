@@ -12,6 +12,24 @@ export const getHd = (imageName: string) => BASE_URL + "/hd/" + imageName + ".jp
 
 const albums: Album[] = [
   {
+    name: "Nostalgia",
+    cover: "DSC00709",
+    photos: [
+      "DSC00709"
+    ],
+    slug: "nostalgia",
+    description: "Nostalgic, almost unreal colors and lighting"
+  },
+  {
+    name: "Contrasted Moods",
+    cover: "DSC00789",
+    photos: [
+      "DSC00789"
+    ],
+    slug: "contrasted-moods",
+    description: "General mood of the image, contrasted by a single subject causing internal disphoria"
+  },
+  {
     name: "Cyberpunk",
     cover: "DSC00432",
     photos: [
@@ -81,7 +99,8 @@ const albums: Album[] = [
   {
     name: "Monumental",
     photos: [
-      "DSC00785"
+      "DSC00785",
+      "DSC00749"
     ],
     cover: "DSC00785",
     slug: "monumental"
