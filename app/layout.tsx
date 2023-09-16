@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import "./globals.css";
 import NavigationList from "@/components/NavigationList";
 import { Poppins } from 'next/font/google'
-import { Analytics } from '@vercel/analytics'
+import { Analytics } from '@vercel/analytics/react'
 
 const poppins = Poppins({
   weight: "400",
