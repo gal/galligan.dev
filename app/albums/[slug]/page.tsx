@@ -33,7 +33,7 @@ export default async function AlbumPage({
               data-index={i}
               loading={i > 0 ? "lazy" : "eager"} />
             <nav className="absolute bottom-0 right-0 p-4 bg-black/60">
-              <a href={getHd(image)}>View full image</a>
+              <a href={getHd(image)} className="text-lg">View full image</a>
             </nav>
           </div>
         </div>
