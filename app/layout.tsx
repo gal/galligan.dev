@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import "./globals.css";
 import NavigationList from "@/components/NavigationList";
 import { Poppins } from 'next/font/google'
+import { Analytics } from '@vercel/analytics'
 
 const poppins = Poppins({
   weight: "400",
@@ -48,6 +49,7 @@ export default function RootLayout({
           <div className="pt-14 min-h-[100dvh]">
             {children}
           </div>
+          <Analytics />
         </div>
       </body>
     </html>
