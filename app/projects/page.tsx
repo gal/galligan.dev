@@ -1,15 +1,8 @@
-// import firebase from '../../utils/db';
-// import { getFirestore, collection, getDocs } from "firebase/firestore";
-
-// const firestore = getFirestore(firebase)
-
 import { Project } from "@/types";
 import { client } from "@/sanity/lib/client";
 import { groq } from "next-sanity";
 
 export default async function Projects() {
-  // const res = await getDocs(collection(firestore, "projects"));
-  // const data = res.docs.map((doc) => doc.data()) as Project[];
   const projectQuery = groq`*[_type == "project"]`;
   const data = (await client.fetch(projectQuery)) as Project[];
 
