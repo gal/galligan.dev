@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createBrowserRouter, Link, RouterProvider } from "react-router-dom";
 import Home from "./pages/Home/Home";
 import Photography from "./pages/photography/Photography";
 import Album from "./pages/photography/album/Album";
@@ -33,7 +33,7 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
             <a href="https://blog.galligan.dev">Blog</a>
           </li>
           <li>
-            <a href="/photography">Photography</a>
+            <Link to="/photography">Photography</Link>
           </li>
         </ul>
       </nav>
