@@ -1,0 +1,32 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.links {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.links li {
+  margin: 1em;
+}
+
+#experience {
+  margin-top: 100px;
+}
+
+.experience-table tbody td {
+  padding: 0.6em;
+  margin: 0 1em;
+  text-align: left;
+}
+
+.experience-table {
+  margin: 1em;
+  border-left: 1px solid white;
+}
