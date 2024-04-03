@@ -6,6 +6,8 @@
 }
 
 .links {
+  margin: 0;
+  padding: 0;
   list-style-type: none;
   display: flex;
   align-items: center;
@@ -20,13 +22,34 @@
   margin-top: 100px;
 }
 
+#experience > h1 {
+  text-align: left;
+  margin-left: 2rem;
+}
+
 .experience-table tbody td {
-  padding: 0.6em;
-  margin: 0 1em;
+  padding: 0.6rem;
+  /* margin: 0 1em; */
   text-align: left;
 }
 
+.experience-table tbody tr td:first-child {
+  white-space: nowrap;
+}
+
+.experience-table tbody tr td {
+  white-space: wrap;
+}
+
 .experience-table {
-  margin: 1em;
-  border-left: 1px solid white;
+  margin-left: 1rem;
+  padding-left: 1rem;
+  border-left: 2px solid white;
+}
+
+@media screen and (max-width: 768px) {
+  .experience-table {
+    border-left: none;
+    margin: auto;
+  }
 }
