@@ -104,6 +104,12 @@ function Home() {
                   QA Engineer Intern @ <em>DELL Technologies</em>
                 </td>
               </tr>
+              <tr>
+                <td>2017-2017</td>
+                <td>
+                  IT Support Intern @ <em>DCE Computers Ltd</em>
+                </td>
+              </tr>
             </tbody>
           </table>
         </section>

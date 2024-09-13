@@ -26,6 +26,12 @@ export const getHd = (imageName: string) =>
 
 const albums: Album[] = [
   {
+    name: "Birds",
+    photos: ["A7403158", "DSC00232", "DSC00231", "DSC00268"],
+    cover: "A7403158",
+    slug: "cork",
+  },
+  {
     name: "Cyberpunk",
     cover: "A7401752",
     photos: ["A7401752", "DSC00503", "DSC00432"],
@@ -33,17 +39,17 @@ const albums: Album[] = [
     description: "Cyberpunk aesthetic",
   },
   {
-    name: "Night lights",
-    cover: "A7401740",
-    photos: ["A7401740"],
-    slug: "night-lights",
-  },
-  {
     name: "Nostalgia",
     cover: "DSC00709",
     photos: ["DSC00709"],
     slug: "nostalgia",
     description: "Nostalgic, almost unreal colors and lighting",
+  },
+  {
+    name: "Night lights",
+    cover: "A7401740",
+    photos: ["A7401740"],
+    slug: "night-lights",
   },
   {
     name: "Contrasted Moods",
@@ -76,12 +82,6 @@ const albums: Album[] = [
     slug: "victoria-street",
   },
   {
-    name: "Birds",
-    photos: ["DSC00232", "DSC00231", "DSC00268"],
-    cover: "DSC00232",
-    slug: "cork",
-  },
-  {
     name: "Nature",
     photos: ["DSC00616", "DSC00103", "DSC01119"],
     cover: "DSC00616",
@@ -107,7 +107,7 @@ const albums: Album[] = [
   },
   {
     name: "Liminal Architecture",
-    photos: ["DSC00421", "DSC00705"],
+    photos: ["DSC00421", "DSC00705", "DSC00626"],
     cover: "DSC00421",
     slug: "liminal-architecture",
   },
