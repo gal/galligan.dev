@@ -8,6 +8,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      screens: {
+        "mob": '400px"'
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
