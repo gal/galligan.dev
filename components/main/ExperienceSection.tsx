@@ -6,7 +6,7 @@ export interface Experience {
     years?: string
     url?: string
     stack?: string[]
-    text?: string | ReactElement<any, any>
+    text?: string | ReactElement
 }
 
 const ExperienceSection = (props: { experience: Array<Experience> }) => {
