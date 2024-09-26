@@ -11,18 +11,18 @@ export interface Experience {
 
 const ExperienceSection = (props: { experience: Array<Experience> }) => {
     return (
-        <div className="mx-auto w-full sm:w-[60%] max-w-[1280px]">
-            <div className="grid grid-cols-3 h-full justify-center items-center">
-                <div className="col-span-1">
+        <div className="mx-auto w-[95dvw] md:w-[60%] max-w-[1280px]">
+            <div className="grid md:grid-cols-3 h-full justify-center items-center">
+                <div className="col-span-1 mb-4">
                     <h1 className="text-5xl">Experience.</h1>
                 </div>
                 <div className="col-span-2">
                     {props.experience.map((exp, i) => (
-                        <div key={`exp-${1}`} className="grid sm:grid-cols-8">
-                            <div className="sm:col-span-2 p-2" style={{ borderRight: "1px solid white" }}>
+                        <div key={`exp-${exp.text}`} className="grid md:grid-cols-3 gap-8">
+                            <div className="md:col-span-1 p-2" style={{ borderRight: "1px solid white" }}>
                                 {exp.years}
                             </div>
-                            <div className="pl-8 mb-4 sm:col-span-6">
+                            <div className="mb-4 md:col-span-2 grid grid-col-span-2">
                                 <div className="flex justify-between">
                                     <h1 className="text-lg font-bold">{exp.role}</h1>
                                     {exp.stack !== undefined && (

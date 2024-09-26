@@ -2,10 +2,10 @@ import { FaGithub, FaLinkedin, FaRegEnvelope } from "react-icons/fa";
 
 const AboutSection = () => {
     return (
-        <div className="mx-auto w-full sm:w-[60%] max-w-[1280px]">
-            <div className="w-full grid grid-cols-3 h-full justify-center items-center text-center">
-                <div className="col-span-1 text-left">
-                    <h1 className="text-5xl">About.</h1>
+        <div className="mx-auto w-[95dvw] md:w-[60%] max-w-[1280px]">
+            <div className="w-full grid md:grid-cols-3 h-full justify-center items-center">
+                <div className="col-span-1">
+                    <h1 className="text-5xl mb-4">About.</h1>
                 </div>
                 <div className="text-left col-span-2 w-full">
                     <h1 className="text-8xl">Thomas Galligan</h1>
@@ -18,9 +18,9 @@ const AboutSection = () => {
                         sharing my knowledge as a leader at Cork Airport CoderDojo, teaching young developers the fundamentals of web technologies.
                     </p>
                     <ul className="ml-4 mt-2 text-2xl flex gap-4">
-                        <a href="mailto://thomas@galligan.dev" title="thomas@galligan.dev"><FaRegEnvelope /></a>
-                        <a href="https://github.com/gal" title="github.com/gal"><FaGithub /></a>
-                        <a href="https://linkedin.com/in/gal1" title="linkedin.com/in/gal1"><FaLinkedin /></a>
+                        <a aria-label="Mailto: link for my email address at mailto://thomas@galligan.dev" href="mailto://thomas@galligan.dev" title="thomas@galligan.dev"><FaRegEnvelope /></a>
+                        <a aria-label="Link to my GitHub profile" href="https://github.com/gal" title="github.com/gal"><FaGithub /></a>
+                        <a aria-label="Link to my LinkedIn profile" href="https://linkedin.com/in/gal1" title="linkedin.com/in/gal1"><FaLinkedin /></a>
                     </ul>
                 </div>
             </div>
