@@ -17,21 +17,10 @@ export default function Home() {
     },
     {
       "role": "Chairperson / Champion",
-      "company": "Cork Airport CoderDojo",
+      "company": "CoderDojo",
       "years": "2023 - Present",
       "url": "https://corkairportdojo.ie",
       "text": "I run a coding club at the IBM office in Cork, where I teach HTML, CSS, and JavaScript to children. For older students, I introduce more advanced web technologies such as React."
-    },
-    {
-      "role": "Software Engineer Intern",
-      "company": "IBM",
-      "years": "Mar. - Sep. 2023",
-      "stack":
-        [
-          "Java", "React", "TypeScript", "Kubernetes"
-        ],
-      "url": "https://ibm.com",
-      "text": "Resolved UI inconsistencies in a React codebase to improve user experience. I led the development of a new build infrastructure environment, reducing downtime and ensuring data integrity. Additionally, I created Ansible playbooks for K3s cluster deployment and implemented secrets management using HashiCorp Vault to secure sensitive data."
     },
     {
       "role": "Chairperson",
@@ -43,6 +32,17 @@ export default function Home() {
           "NextJS", "TypeScript"
         ],
       "text": "Grew society membership by 300 in one year, hosted Tech talks, workshops, and a game jam. Also hosted, and built the website (using NextJS integrated with Stripe for ticketing) for Cork DevCon, a Tech conference in Cork."
+    },
+    {
+      "role": "Software Engineer Intern",
+      "company": "IBM",
+      "years": "Mar. - Sep. 2023",
+      "stack":
+        [
+          "Java", "React", "TypeScript", "Kubernetes"
+        ],
+      "url": "https://ibm.com",
+      "text": "Resolved UI inconsistencies in a React codebase to improve user experience. I led the development of a new build infrastructure environment, reducing downtime and ensuring data integrity. Additionally, I created Ansible playbooks for K3s cluster deployment and implemented secrets management using HashiCorp Vault to secure sensitive data."
     },
     {
       "role": "SysAdmin",

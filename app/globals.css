@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 :root {
+  font-size: 18px;
   --background: #ffffff;
   --foreground: #171717;
 }
@@ -24,4 +25,21 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+a {
+  padding: 6px;
+  text-decoration: underline;
+  text-decoration-color: #a53893;
+  text-decoration-thickness: 2px;
+} 
+
+a:hover {
+  background-color: rgba(172, 42, 150, 0.199);
+  border-radius: 2px;
+  transition: 0.1s ease-in-out;
+}
+
+#projects a {
+  text-decoration: none;
 }

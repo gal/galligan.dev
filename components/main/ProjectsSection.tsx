@@ -11,10 +11,10 @@ export interface Project {
 
 const ProjectsSection = (props: { projects: Project[] }) => {
     return (
-        <div className="mx-auto w-[95dvw] max-w-[1280px]">
+        <div id="projects" className="mx-auto w-[95dvw] max-w-[1280px]">
             <div className="w-full grid md:grid-cols-3 h-full justify-center items-center">
-                <div className="md:col-span-1 mb-4">
-                    <h1 className="text-5xl">Projects.</h1>
+                <div className="md:col-span-1 mb-4 mr-16 text-right">
+                    <h1 className="text-5xl">Projects</h1>
                 </div>
                 {/* <div className="text-left grid sm:grid-cols-3 sm:col-span-2 w-full gap-8"> */}
                 <div className="col-span-2">
