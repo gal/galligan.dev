@@ -1,5 +1,4 @@
 import { ReactElement } from "react";
-import { FaFileAlt, FaGithub, FaLinkedin, FaRegEnvelope } from "react-icons/fa";
 
 export interface AboutLink {
   icon: ReactElement;
@@ -23,7 +22,7 @@ const AboutSection = (props: { links: AboutLink[] }) => {
               <div className="ml-2 mt-2">
                 <h2 className="text-lg">Software Engineer</h2>
                 <h3 className="font-bold">
-                  IBM{" "}
+                  IBM
                   <span className="m-4">2023 - Present</span>
                 </h3>
               </div>
@@ -31,7 +30,7 @@ const AboutSection = (props: { links: AboutLink[] }) => {
           </div>
           <div className="grid md:grid-cols-3 mt-12 gap-8">
             <nav>
-              {props.links.map((link, i) => (
+              {props.links.map((link) => (
                 <div key={link.label} className="grid grid-cols-4 mt-2">
                   <span className="col-span-1"></span>
                   <span className="col-span-3 flex items-center">
@@ -57,46 +56,7 @@ const AboutSection = (props: { links: AboutLink[] }) => {
               frontend technologies, and infrastructure automation. I also enjoy
               sharing my knowledge as a leader at Cork Airport CoderDojo,
               teaching young developers the fundamentals of web technologies.
-            </p>{" "}
-            {/* <ul className="flex flex-col gap-2">
-              <div></div> */}
-            {/* 
-              <a
-                className=" flex gap-4 items-center grid grid-cols-4"
-                aria-label="Link to my CV/Resume"
-                href="/cv.pdf"
-                title="thomas@galligan.dev"
-              >
-                <span className="col-span-3">CV</span>
-              </a>
-              <a
-                className=" flex gap-4 items-center"
-                aria-label="Mailto: link for my email address at mailto://thomas@galligan.dev"
-                href="mailto://thomas@galligan.dev"
-                title="thomas@galligan.dev"
-              >
-                <FaRegEnvelope />
-                Email
-              </a>
-              <a
-                className=" flex gap-4 items-center"
-                aria-label="Link to my GitHub profile"
-                href="https://github.com/gal"
-                title="github.com/gal"
-              >
-                <FaGithub />
-                GitHub
-              </a>
-              <a
-                className=" flex gap-4 items-center"
-                aria-label="Link to my LinkedIn profile"
-                href="https://linkedin.com/in/gal1"
-                title="linkedin.com/in/gal1"
-              >
-                <FaLinkedin />
-                LinkedIn
-              </a> */}
-            {/* </ul> */}
+            </p>
           </div>
         </div>
       </div>
