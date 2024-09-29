@@ -4,21 +4,27 @@
 
 :root {
   font-size: 18px;
-  --background: #ffffff;
+  --background: #e0e0e0;
   --foreground: #171717;
+  --light: #171717cc;
+
+  --primary: #a53893;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #141414;
     --foreground: #ededed;
+    --light: #edededcc;
+    --primary: #a53893;
   }
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  /* font-family: Arial, Helvetica, sans-serif; */
+  /* font-family: 'Times New Roman', Times, serif; */
 }
 
 @layer utilities {
@@ -28,18 +34,26 @@ body {
 }
 
 a {
-  padding: 6px;
+  display: inline-block;
+  box-sizing: content-box;
   text-decoration: underline;
   text-decoration-color: #a53893;
   text-decoration-thickness: 2px;
-} 
+  padding: 4px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
 
 a:hover {
-  background-color: rgba(172, 42, 150, 0.199);
-  border-radius: 2px;
+  color: #be4fac;
+  border-color: #a53893;
   transition: 0.1s ease-in-out;
 }
 
 #projects a {
   text-decoration: none;
+}
+
+.light {
+  color: var(--light);
 }

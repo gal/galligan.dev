@@ -15,7 +15,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`antialiased`}
+        className="antialiased scrollbar-thin md:scrollbar scrollbar-track-gray-400/20"
       >
         <Header />
         {children}

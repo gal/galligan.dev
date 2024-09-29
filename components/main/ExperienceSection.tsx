@@ -11,16 +11,17 @@ export interface Experience {
 
 const ExperienceSection = (props: { experience: Array<Experience> }) => {
     return (
-        <div className="mx-auto w-[95dvw] md:w-[60%] max-w-[1280px]">
-            <div className="grid md:grid-cols-3 h-full justify-center items-center">
-                <div className="col-span-1 mb-4 mr-16 text-right">
+        <section id="experience" className="mx-auto w-[95dvw] max-w-[1280px]">
+            <div className="grid md:grid-cols-3 h-full justify-center">
+                <div className="col-span-1">
                     <h1 className="text-5xl">Experience</h1>
                 </div>
                 <div className="col-span-2">
                     {props.experience.map((exp, i) => (
                         <div key={`exp-${exp.text}`} className="grid md:grid-cols-3 gap-8">
-                            <div className="md:col-span-1 ml-16" style={{ borderRight: "1px solid white" }}>
-                                {exp.years}
+                            <div className="md:col-span-1 grid grid-cols-4 md:border-solid md:border-r border-black dark:border-white">
+                                <div className="hidden md:block"></div>
+                                <div className="mt-2 px-2 light md:mt-0 md:col-span-3">{exp.years}</div>
                             </div>
                             <div className="mb-4 md:col-span-2 grid grid-col-span-2">
                                 <div className="flex justify-between">
@@ -39,22 +40,22 @@ const ExperienceSection = (props: { experience: Array<Experience> }) => {
                                     )}
                                 </div>
 
-                                <h2 className="">
+                                <h2 className="flex">
                                     {exp.url !== undefined ? (
-                                        <a className="underline" href={exp.url}>{exp.company}</a>
+                                        <a className="underline ml-[-4px]" href={exp.url}>{exp.company}</a>
                                     ) : <>{exp.company}</>}
                                 </h2>
-                                <p className="mt-1 text-sm text-slate-600 dark:text-slate-300">
+                                <p className="mt-1 text-sm light">
                                     {exp.text}
                                 </p>
-                                <div className="w-[60%] my-4 mx-auto h-[1px] bg-neutral-500"></div>
+                                <div className="w-[60%] my-4 mx-auto h-[1px] light"></div>
 
                             </div>
                         </div>
                     ))}
                 </div>
             </div>
-        </div>
+        </section>
     )
 }
 

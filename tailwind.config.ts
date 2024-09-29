@@ -13,6 +13,7 @@ const config: Config = {
       },
       colors: {
         background: "var(--background)",
+        light: "var(--light)",
         foreground: "var(--foreground)",
       },
     },
