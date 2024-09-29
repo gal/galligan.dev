@@ -13,7 +13,7 @@ const ExperienceSection = (props: { experience: Array<Experience> }) => {
     return (
         <section id="experience" className="mx-auto w-[95dvw] max-w-[1280px]">
             <div className="grid md:grid-cols-3 h-full justify-center">
-                <div className="col-span-1">
+                <div className="text-5xl mb-4 mr-16 text-right">
                     <h1 className="text-5xl">Experience</h1>
                 </div>
                 <div className="col-span-2">

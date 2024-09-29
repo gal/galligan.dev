@@ -13,7 +13,7 @@ const ProjectsSection = (props: { projects: Project[] }) => {
     return (
         <section id="projects" className="mx-auto w-[95dvw] max-w-[1280px]">
             <div className="w-full grid md:grid-cols-3 h-full justify-center">
-                <div className="md:col-span-1 mb-4 mr-16 text-right">
+                <div className="text-5xl mb-4 mr-16 text-right">
                     <h1 className="text-5xl">Projects</h1>
                 </div>
                 <div className="col-span-2">
