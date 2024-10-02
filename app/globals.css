@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  font-size: 18px;
+  font-size: 110%; /* relative to user's preference */
   --background: #e0e0e0;
   --foreground: #171717;
   --light: #171717cc;
@@ -23,8 +23,7 @@
 body {
   color: var(--foreground);
   background: var(--background);
-  /* font-family: Arial, Helvetica, sans-serif; */
-  /* font-family: 'Times New Roman', Times, serif; */
+  font-family: monospace;
 }
 
 @layer utilities {
@@ -56,4 +55,24 @@ a:hover {
 
 .light {
   color: var(--light);
+  line-height: 1.5;
+}
+
+.header, .sec {
+  margin: 0 auto;
+  width: 95%;
+  max-width: 1280px;
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
+.header {
+  top: 0;
+  position: sticky;
+}
+
+@media screen and (max-width: 768px) {
+  .header, .sec {
+    display: block;
+  }
 }
