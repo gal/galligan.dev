@@ -7,7 +7,7 @@ const Header = () => {
                 <div></div>
                 <nav className="h-full max-w-[1280px] md:col-span-3 flex flex-row justify-center md:justify-start items-center text-xl">
                     <a href="/">Home</a>
-                    <a href="https://blog.galligan.dev">Blog</a>
+                    <a href="https://www.blog.galligan.dev">Blog</a>
                     <a href="/photography">Photography</a>
                 </nav>
             </div>
