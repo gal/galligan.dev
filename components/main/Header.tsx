@@ -1,6 +1,6 @@
 const Header = () => {
     return (
-        <header className="header h-[10dvh] mb-[100px] md:grid md:grid-cols-5 sticky bg-inherit">
+        <header className="z-50 m-0 w-[100dvw] header h-[10dvh] md:grid md:grid-cols-5 sticky">
             <div></div>
             <div></div>
             <nav className="h-full w-full md:col-span-3 flex flex-row justify-center md:justify-start items-center text-xl">

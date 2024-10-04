@@ -4,20 +4,33 @@
 
 :root {
   font-size: 110%; /* relative to user's preference */
-  --background: #e0e0e0;
-  --foreground: #171717;
-  --light: #171717cc;
-
+  --background: #141414;
+  --foreground: #ededed;
+  --light: #edededcc;
   --primary: #a53893;
 }
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: light) {
   :root {
-    --background: #141414;
-    --foreground: #ededed;
-    --light: #edededcc;
-    --primary: #a53893;
+    --background: #eae8e8;
+    --foreground: #171717;
+    --light: #171717cc;
   }
+}
+
+@media screen and (max-width: 768px) {
+  :root {
+    font-size: 120%;
+  }  
+}
+@media screen and (max-width: 768px) {
+  .header, .sec {
+    display: block;
+  }
+}
+header {
+  background-color: var(--background);
+  width: 100vw;
 }
 
 body {
@@ -58,9 +71,9 @@ a:hover {
   line-height: 1.5;
 }
 
-.header, .sec {
-  margin: 0 auto;
-  width: 95%;
+.sec {
+  margin: 3em auto 0 auto;
+  /* width: 95%; */
   max-width: 1280px;
   display: grid;
   grid-template-columns: repeat(5, minmax(0, 1fr));
@@ -69,10 +82,26 @@ a:hover {
 .header {
   top: 0;
   position: sticky;
+
+  background: var(--background);
 }
 
-@media screen and (max-width: 768px) {
-  .header, .sec {
-    display: block;
-  }
+
+.construction {
+  border: 20px solid pink;
+  border-image: repeating-linear-gradient(
+    -55deg,
+    #000,
+    #000 40px,
+    #ffb101 40px,
+    #ffb101 80px
+  ) 20;
 }
+/* 
+.gallery-container {
+  min-height: 90dvh;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 4em;
+  gap: 5px;
+} */
