@@ -10,10 +10,12 @@ export default function Photography() {
       <Head>
         <link rel="preload" href={HERO_PHOTO} as="image" />
       </Head>
-      <div className='min-h-[90dvh] w-full relative'>
-        <Image loading="eager" priority fill={true} alt='' src={HERO_PHOTO} className='object-cover' />
-        <div className='absolute w-full h-full flex items-center justify-center bg-black/40'>
-          <h1 className='text-5xl md:text-7xl lg:text-9xl text-center'>
+      <div className='h-[90dvh] w-full relative'>
+        <div className='overlay relative w-full h-full flex items-center justify-center'>
+          <Image
+            className='absolute object-cover'
+          src={HERO_PHOTO} fill={true} priority loading="eager" alt='Hero image, showing a photo of stained glass' />
+          <h1 className='z-50 text-bold text-5xl md:text-7xl lg:text-9xl text-center '>
             Photography
           </h1>
 

@@ -83,7 +83,7 @@ export default function ImageGallery() {
           <header className='w-full top-[10dvh] h-[5dvh] left-0 right-0 '>
             <div className='px-4 w-full h-full flex justify-between items-center text-lg'>
               <Link target='_blank' href={getHd(photographs[zoomedImage])} >
-                <h1 className='inline mx-2'>
+                <h1 className='inline mx-2 bg-clip-text text-transparent'>
                   {photographs[zoomedImage]}
                 </h1>
                 <span className='light text-xs'>

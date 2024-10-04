@@ -91,6 +91,13 @@ li {
   ) 20;
 }
 
+.overlay>h1 {
+  font-weight: 700;
+  font-size: 12vw;
+
+  -webkit-text-stroke: 0.3px black;
+}
+
 @media screen and (max-width: 768px) {
   .sec {
     padding-left: 1em;
