@@ -52,6 +52,10 @@ a:hover {
   transition: 0.1s ease-in-out;
 }
 
+li {
+  list-style-type: none;
+}
+
 #projects a {
   text-decoration: none;
 }
@@ -86,14 +90,6 @@ a:hover {
     #ffb101 80px
   ) 20;
 }
-/* 
-.gallery-container {
-  min-height: 90dvh;
-  box-sizing: border-box;
-  width: 100%;
-  padding: 4em;
-  gap: 5px;
-} */
 
 @media screen and (max-width: 768px) {
   .sec {

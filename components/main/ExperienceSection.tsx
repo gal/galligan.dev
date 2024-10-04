@@ -19,7 +19,7 @@ const ExperienceSection = (props: { experience: Array<Experience> }) => {
         {props.experience.map((exp, i) => (
           <div key={`exp-${exp.text}`} className="grid md:grid-cols-4">
             <div className="md:col-span-1 md:grid md:grid-cols-3">
-              <div className="px-2 light col-span-2 text-sm md:border-solid md:border-r border-black dark:border-white">
+              <div className="md:px-2 light col-span-2 text-sm md:border-solid md:border-r border-black dark:border-white">
                 {exp.years}
               </div>
               <div></div>
