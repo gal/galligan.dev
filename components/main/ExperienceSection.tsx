@@ -30,12 +30,12 @@ const ExperienceSection = (props: { experience: Array<Experience> }) => {
                 {exp.stack !== undefined && (
                   <ul>
                     {exp.stack?.map((tech, j) => (
-                      <span key={`exp-${i}-tech-${j}`}>
+                      <li key={`exp-${i}-tech-${j}`}>
                         <i className="padding-1 bg-grey-200 dark:bg-grey-500">
                           {tech}
                         </i>
                         {exp.stack!.length - 1 == j ? "" : ", "}
-                      </span>
+                      </li>
                     ))}
                   </ul>
                 )}

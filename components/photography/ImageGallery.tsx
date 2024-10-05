@@ -79,11 +79,11 @@ export default function ImageGallery() {
       </div>
 
       {zoomedImage !== undefined && (
-        <div onKeyDown={(e) => { if (e.key == "Escape") setZoomedImage(undefined) }} onClick={() => setZoomedImage(undefined)} className="fixed top-[10dvh] right-0 left-0 bottom-0 bg-black/90 w-full h-[100dvh]">
+        <div onKeyDown={(e) => { if (e.key == "Escape") setZoomedImage(undefined) }} onClick={() => setZoomedImage(undefined)} className="z-50 fixed top-[10dvh] right-0 left-0 bottom-0 bg-black/90 w-full h-[100dvh]">
           <header className='w-full top-[10dvh] h-[5dvh] left-0 right-0 '>
             <div className='px-4 w-full h-full flex justify-between items-center text-lg'>
               <Link target='_blank' href={getHd(photographs[zoomedImage])} >
-                <h1 className='inline mx-2 bg-clip-text text-transparent'>
+                <h1 className='inline mx-2'>
                   {photographs[zoomedImage]}
                 </h1>
                 <span className='light text-xs'>

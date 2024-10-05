@@ -24,12 +24,12 @@ const ProjectsSection = (props: { projects: Project[] }) => {
                                 {proj.stack && (
                                     <ul className="mb-1">
                                         {proj.stack.map((tech, j) => (
-                                            <span key={tech} className="text-xs">
+                                            <li key={tech} className="text-xs">
                                                 <i className="padding-1 bg-grey-200 dark:bg-grey-500">
                                                     {tech}
                                                 </i>
                                                 {proj.stack!.length - 1 == j ? "" : ", "}
-                                            </span>
+                                            </li>
                                         ))}
                                     </ul>
                                 )}
