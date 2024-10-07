@@ -28,7 +28,7 @@ const ExperienceSection = (props: { experience: Array<Experience> }) => {
               <div className="flex justify-between">
                 <h1 className="text-lg font-bold">{exp.role}</h1>
                 {exp.stack !== undefined && (
-                  <ul>
+                  <ul className="flex">
                     {exp.stack?.map((tech, j) => (
                       <li key={`exp-${i}-tech-${j}`}>
                         <i className="padding-1 bg-grey-200 dark:bg-grey-500">

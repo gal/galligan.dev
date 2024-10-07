@@ -15,7 +15,7 @@ export default function Photography() {
           <Image
             className='absolute object-cover'
           src={HERO_PHOTO} fill={true} priority loading="eager" alt='Hero image, showing a photo of stained glass' />
-          <h1 className='z-30 text-bold text-5xl md:text-7xl lg:text-9xl text-center '>
+          <h1 className='z-30 text-bold text-5xl md:text-7xl lg:text-9xl text-center'>
             Photography
           </h1>
 
