@@ -1,6 +1,27 @@
 import ImageGallery from '@/components/photography/ImageGallery';
+import { Metadata } from 'next';
 import Head from 'next/head';
 import Image from 'next/image'
+
+
+const TITLE = "Photography | Thomas Galligan"
+const DESC = `Amateur photography`
+
+export const metadata: Metadata = {
+  title: TITLE,
+  authors: [{name: "Thomas Galligan", url: "https://galligan.dev"}],
+  description: DESC,
+  robots: "index, follow", 
+  openGraph: {
+    type: "profile",
+    description: DESC,
+    firstName: "Thomas",
+    lastName: "Galligan",
+    title: TITLE,
+    url: "https://galligan.dev"
+  },
+  keywords: "photography, amateur photography, lens art, personal website, portfolio"
+};
 
 export default function Photography() {
   const HERO_PHOTO = "https://d2kxt83yjeiafa.cloudfront.net/albums2/regular/DSC00658.webp";
@@ -15,7 +36,7 @@ export default function Photography() {
           <Image
             className='absolute object-cover'
           src={HERO_PHOTO} fill={true} priority loading="eager" alt='Hero image, showing a photo of stained glass' />
-          <h1 className='z-30 text-bold text-5xl md:text-7xl lg:text-9xl text-center'>
+          <h1 className='z-30 text-white text-bold text-5xl md:text-7xl lg:text-9xl text-center'>
             Photography
           </h1>
 

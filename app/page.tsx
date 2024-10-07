@@ -3,7 +3,34 @@ import ExperienceSection, {
   Experience,
 } from "@/components/main/ExperienceSection";
 import ProjectsSection, { Project } from "@/components/main/ProjectsSection";
+import { Metadata } from "next";
 import { FaFileAlt, FaGithub, FaLinkedin, FaRegEnvelope } from "react-icons/fa";
+
+
+const TITLE = "Thomas Galligan | Software Engineer"
+const DESC = `Software Engineer with a strong background in full-stack development
+and containerization. Currently at IBM, I work on enhancing
+microservices and delivering robust solutions for large enterprises.
+With experience spanning backend development, frontend technologies,
+and infrastructure automation. I also enjoy sharing my knowledge as
+a leader at Cork Airport CoderDojo, teaching young developers the
+fundamentals of web technologies`
+
+export const metadata: Metadata = {
+  title: TITLE,
+  authors: [{name: "Thomas Galligan", url: "https://galligan.dev"}],
+  description: DESC,
+  robots: "index, follow", 
+  openGraph: {
+    type: "profile",
+    description: DESC,
+    firstName: "Thomas",
+    lastName: "Galligan",
+    title: TITLE,
+    url: "https://galligan.dev"
+  },
+  keywords: "software developer, Thomas Daniel Galligan, software engineer, personal website, portfolio"
+};
 
 export default function Home() {
   const aboutLinks: AboutLink[] = [
