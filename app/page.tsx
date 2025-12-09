@@ -78,8 +78,7 @@ export default function Home() {
     },
     {
       role: "Chairperson",
-      company: "UCC Netsoc",
-      url: "https://netsoc.co/rk",
+      company: "UCC Networking Society",
       years: "2023 - 2024",
       stack: ["NextJS", "TypeScript"],
       text: "Grew society membership by 300 in one year, hosted Tech talks, workshops, and a game jam. Also hosted, and built the website (using NextJS integrated with Stripe for ticketing) for Cork DevCon, a Tech conference in Cork.",
@@ -94,8 +93,7 @@ export default function Home() {
     },
     {
       role: "SysAdmin",
-      company: "UCC Netsoc",
-      url: "https://netsoc.co/rk",
+      company: "UCC Networking Society",
       years: "2019 - 2023",
       stack: ["Golang", "Docker", "Ansible", "TypeScript", "Python"],
       text: "Maintained and managed a datacenter of servers with Proxmox hypervisor with dozens of docker containers provisioned via Ansible. Built software to support UCC students, primarily in Computer Science with our infrastructure.",
