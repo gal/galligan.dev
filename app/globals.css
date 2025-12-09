@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+/* @custom-variant dark (&:where(.dark, .dark *)); */
+
 :root {
   font-size: 110%; /* relative to user's preference */
   --background: #141414;
@@ -10,13 +12,13 @@
   --primary: #a53893;
 }
 
-@media (prefers-color-scheme: light) {
+/* @media (prefers-color-scheme: light) {
   :root {
     --background: #eae8e8;
     --foreground: #171717;
     --light: #171717cc;
   }
-}
+} */
 
 header {
   background-color: var(--background);

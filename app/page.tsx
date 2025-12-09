@@ -67,7 +67,7 @@ export default function Home() {
       years: "2023 - Present",
       stack: ["Java", "Python", "TypeScript"],
       url: "https://ibm.com",
-      text: "Led the containerization of a new microservice, integrating CI/CD pipelines for automated testing and deployment to a private Docker registry. I implemented observability and metrics for the microservice, facilitating monitoring for SREs, and worked on feature development, bug fixes, and vulnerability resolution. Additionally, I provided L3 support to address customer issues using my backend expertise.",
+      text: "Initiated and led development of watsonx.ai for SOAR Analysts, enabling automated evidence assessment, report generation, and faster incident response for security teams.",
     },
     {
       role: "Chairperson / Champion",
